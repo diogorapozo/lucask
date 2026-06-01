@@ -73,6 +73,17 @@ th { background: #f1f5f9; color: var(--primary); font-weight: 700; }
 .banner-content { display: none; padding: 20px; border: 2px solid var(--border); border-radius: 8px; margin-bottom: 20px; }
 
 @media (max-width: 768px) { .tabs { flex-direction: column; } .tab-btn { border-bottom: 1px solid var(--border); width: 100%; text-align: left; } .tab-btn.active { border-left: 4px solid var(--primary); border-bottom: 1px solid var(--border); } }
+.header-layout { display: flex; align-items: center; gap: 30px; margin-bottom: 25px; border-bottom: 2px solid var(--border); padding-bottom: 20px; }
+.header-logo { width: 140px; height: auto; flex-shrink: 0; }
+.header-content { flex-grow: 1; }
+.header-content h1 { text-align: left; border: none; padding: 0; margin: 0 0 5px 0; }
+.header-content p { text-align: left !important; margin: 0 0 15px 0; }
+.header-content .progress-text { text-align: left; margin-top: 0; }
+.header-content .progress-container { margin-bottom: 0; }
+@media (max-width: 768px) { 
+  .header-layout { flex-direction: column; text-align: center; gap: 15px; } 
+  .header-content h1, .header-content p, .header-content .progress-text { text-align: center !important; } 
+}
 </style>
 </head>
 <body>

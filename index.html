@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced English Prep: Writing Bank & Exam Maximizer</title>
+<style>
+:root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; --border: #cbd5e1; --success: #22c55e; --error: #ef4444; --accent: #8b5cf6; }
+body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+.header-image { width: 100%; height: 250px; object-fit: cover; display: block; }
+.container { max-width: 1200px; margin: 0 auto; background: #fff; padding: 30px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / .1); min-height: 100vh; }
+h1, h2, h3, h4 { color: var(--primary); }
+h1 { text-align: center; padding-bottom: 10px; margin-top: 0; }
+
+/* Progress Bars */
+.progress-container { background: #e2e8f0; border-radius: 8px; height: 12px; width: 100%; margin-bottom: 20px; overflow: hidden; position: relative; }
+.progress-bar { background: var(--success); height: 100%; width: 0%; transition: width 0.4s ease; }
+.progress-text { text-align: center; font-size: 0.85em; font-weight: bold; margin-top: -15px; margin-bottom: 20px; color: #64748b; }
+.success-bar-container { margin-top: 15px; display: none; }
+.success-bar-text { font-size: 0.9em; font-weight: bold; margin-bottom: 5px; }
+
+/* Tabs */
+.tabs { display: flex; overflow-x: auto; border-bottom: 2px solid var(--border); margin-bottom: 20px; background: #f1f5f9; border-radius: 8px 8px 0 0; }
+.tab-btn { background: none; border: none; padding: 15px 25px; cursor: pointer; font-size: 1.1em; font-weight: 700; color: #64748b; white-space: nowrap; transition: all .2s; border-bottom: 3px solid transparent; }
+.tab-btn:hover { color: var(--primary); }
+.tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); background: #fff; }
+.tab-content { display: none; animation: fadeIn .3s; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+/* Exercises & Text Boxes */
+.exercise { margin-bottom: 30px; padding: 20px; border: 1px solid var(--border); border-left: 5px solid var(--primary); background: #fff; border-radius: 6px; }
+.text-box { background: #f8fafc; padding: 25px; border: 1px solid var(--border); border-radius: 5px; margin-bottom: 20px; font-size: 1.05em; }
+.text-box p { margin-top: 0; margin-bottom: 12px; }
+.text-box p:last-child { margin-bottom: 0; }
+.instruction { font-weight: 600; color: #475569; margin-bottom: 10px; }
+.teacher-note { font-style: italic; color: #475569; background: #fef08a; padding: 2px 6px; border-radius: 4px; }
+
+/* Line Numbering System for Texts */
+.numbered-text { counter-reset: paragraph; }
+.numbered-text p { position: relative; padding-left: 30px; }
+.numbered-text p::before { counter-increment: paragraph; content: counter(paragraph); position: absolute; left: 0; color: #94a3b8; font-size: 0.85em; font-weight: bold; width: 20px; text-align: right; }
+
+/* Inputs & Buttons */
+input[type="text"] { padding: 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 1em; width: 250px; max-width: 100%; margin: 5px 0; }
+input.correct { border-color: var(--success); background: #f0fdf4; border-width: 2px;}
+input.incorrect { border-color: var(--error); background: #fef2f2; border-width: 2px;}
+textarea { width: 100%; height: 150px; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; margin-top: 10px; margin-bottom: 10px; resize: vertical; box-sizing: border-box; }
+button { background: var(--primary); color: #fff; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-weight: 600; margin-top: 5px; margin-bottom: 15px; transition: opacity .2s; font-size: 1em; }
+button:hover { opacity: .9; }
+.check-btn { background: #334155; }
+.cambridge-btn { display: inline-block; background: #8b5cf6; color: #fff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: 600; margin-top: 5px; margin-bottom: 15px; transition: opacity .2s; }
+.cambridge-btn:hover { opacity: .9; }
+audio, iframe { width: 100%; max-width: 700px; margin: 15px 0; display: block; border-radius: 6px; }
+.full-width { width: 100% !important; box-sizing: border-box; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 15px 0; background: #fff; border-radius: 6px; overflow: hidden; }
+th, td { border: 1px solid var(--border); padding: 12px; text-align: left; }
+th { background: #f1f5f9; color: var(--primary); font-weight: 700; }
+
+/* Banners */
+.banner-btn { display: block; width: 100%; text-align: left; padding: 20px; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 1.2em; font-weight: bold; color: #0f172a; cursor: pointer; transition: transform 0.2s; }
+.banner-btn:hover { transform: scale(1.01); }
+.b-pastel-1 { background-color: #dbeafe; } /* Pastel Blue */
+.b-pastel-2 { background-color: #d1fae5; } /* Pastel Green */
+.b-pastel-3 { background-color: #f3e8ff; } /* Pastel Purple */
+.b-pastel-4 { background-color: #ffedd5; } /* Pastel Pink/Orange */
+.b-pastel-5 { background-color: #fef08a; } /* Pastel Yellow */
+.banner-content { display: none; padding: 20px; border: 2px solid var(--border); border-radius: 8px; margin-bottom: 20px; }
+
+@media (max-width: 768px) { .tabs { flex-direction: column; } .tab-btn { border-bottom: 1px solid var(--border); width: 100%; text-align: left; } .tab-btn.active { border-left: 4px solid var(--primary); border-bottom: 1px solid var(--border); } }
+</style>
+</head>
+<body>
+
+<img src="https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=1200&q=80" alt="Writing and Study Header" class="header-image">
+
+<div class="container">
+<h1>Advanced English Preparation</h1>
+<p style="text-align:center; color:#64748b;">Self-study platform. Your progress is saved automatically.</p>
+
+<!-- Main Progress Bar -->
+<div class="progress-text">Overall Course Progress: <span id="main-progress-text">0%</span></div>
+<div class="progress-container"><div class="progress-bar" id="main-progress-bar"></div></div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="openTab(event, 'tab-lang')">1. Language & Grammar</button>
+  <button class="tab-btn" onclick="openTab(event, 'tab-labs')">2. Writing Labs</button>
+  <button class="tab-btn" onclick="openTab(event, 'tab-texts')">3. Exam Maximizer (Texts)</button>
+  <button class="tab-btn" onclick="openTab(event, 'tab-guide')">4. Bonus: Article</button>
+</div>
+
+<!-- TAB 1: LANGUAGE & GRAMMAR -->
+<div id="tab-lang" class="tab-content active">
+  <h2>Writing Bank: Language Focus</h2>
+  <div class="progress-text">Section 1 Progress: <span id="sec1-progress-text">0%</span></div>
+  <div class="progress-container"><div class="progress-bar" id="sec1-progress-bar"></div></div>
+  
+  <div class="exercise">
+    <h3>Activity 1: Correcting mistakes and Improving Vocabulary</h3>
+    <p class="instruction">Instruction: Choose the correct word to complete each sentence.</p>
+    <ol>
+      <li>I want to <input type="text" id="wb_g1_1" data-answers='["live"]'> (live / life) in a country where the weather is always warm.</li>
+      <li>The cost of living is much higher now <input type="text" id="wb_g1_2" data-answers='["than"]'> (then / than) it was five years ago.</li>
+      <li>The new policy had a huge impact on everyday <input type="text" id="wb_g1_3" data-answers='["life"]'> (live / life).</li>
+      <li>First, we will analyze the text, and <input type="text" id="wb_g1_4" data-answers='["then"]'> (then / than) we will write a comment.</li>
+      <li>She has experienced a lot of difficult moments in her <input type="text" id="wb_g1_5" data-answers='["life"]'> (live / life).</li>
+      <li>My brother is two years older <input type="text" id="wb_g1_6" data-answers='["than"]'> (then / than) me.</li>
+      <li>They used to <input type="text" id="wb_g1_7" data-answers='["live"]'> (live / life) in London before Brexit.</li>
+      <li>If the system fails, <input type="text" id="wb_g1_8" data-answers='["then"]'> (then / than) many people will lose their apartments.</li>
+    </ol>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g1')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g1"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 2: Grammar Focus: Tenses and Irregular Verbs</h3>
+    <p class="instruction">Instruction: Identify the grammatical error in each sentence and rewrite it correctly.</p>
+    <ol>
+      <li>The system often was offline or doesn't worked.<br><input type="text" class="full-width" id="wb_g2_1" data-answers='["the system was often offline or didn\'t work", "the system often was offline or didn\'t work"]'></li>
+      <li>People that lifed in the UK for 20 years had to apply for housing.<br><input type="text" class="full-width" id="wb_g2_2" data-answers='["people that lived in the uk for 20 years had to apply for housing", "people who lived in the uk for 20 years had to apply for housing"]'></li>
+      <li>The author show how much taxes the citizens have to pay.<br><input type="text" class="full-width" id="wb_g2_3" data-answers='["the author shows how much tax the citizens have to pay", "the author shows how much taxes the citizens have to pay"]'></li>
+      <li>The parade and ceremonies that they have is also high priced.<br><input type="text" class="full-width" id="wb_g2_4" data-answers='["the parades and ceremonies that they have are also highly priced", "the parade and ceremonies that they have are also high priced", "the parades and ceremonies that they have are also high priced"]'></li>
+      <li>You can see clearly that the Brexit doesn't worked exactly how it should.<br><input type="text" class="full-width" id="wb_g2_5" data-answers='["you can clearly see that brexit didn\'t work exactly how it should", "you can see clearly that the brexit didn\'t work exactly how it should", "you can clearly see that the brexit didn\'t work exactly how it should"]'></li>
+    </ol>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g2')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g2"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 3: Literal Translations</h3>
+    <p class="instruction">Instruction: Rewrite the underlined parts using natural English expressions.</p>
+    <ol>
+      <li>The new program for British students <u>has nothing to see</u> with the Europeans.<br><input type="text" class="full-width" id="wb_g3_1" data-answers='["has nothing to do", "has nothing to do with"]'></li>
+      <li>The author is right in many ways, but you also have to <u>see the good sides</u>.<br><input type="text" class="full-width" id="wb_g3_2" data-answers='["look on the bright side", "see the bright side"]'></li>
+      <li>It would be sad if the monarchy got abolished because it is <u>traditionell</u> in England.<br><input type="text" class="full-width" id="wb_g3_3" data-answers='["traditional"]'></li>
+      <li>With all the money that they <u>become</u>, they could help a lot more people.<br><input type="text" class="full-width" id="wb_g3_4" data-answers='["receive", "get", "are given"]'></li>
+    </ol>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g3')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g3"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 4: Essay Gap Fill</h3>
+    <p class="instruction">Read the essay and choose the best option to complete the sentences.</p>
+    <div style="background:#f8fafc; padding:15px; border-radius:5px; margin-bottom:15px; line-height: 2;">
+      Nowadays, many schools are <input type="text" id="wb_g4_1" data-answers='["being"]'> (been / being) asked to make difficult decisions about whether they can afford to offer subjects like music, art, dance and drama. While <input type="text" id="wb_g4_2" data-answers='["it"]'> (it / there) is frequently argued that these subjects are "extras", <input type="text" id="wb_g4_3" data-answers='["which"]'> (that / which) have no guaranteed place on the curriculum, <input type="text" id="wb_g4_4" data-answers='["what"]'> (what / while) we need to remember is that there are important counterarguments, particularly as regards music.
+      <br><br>
+      First of all, music lessons teach "soft skills." For example, unless students experience first-hand the challenges of mastering something difficult, they <input type="text" id="wb_g4_5" data-answers='["won\'t", "will not"]'> (won't / wouldn't) have any understanding of the importance of practice and hard work. This is something they'll <input type="text" id="wb_g4_6" data-answers='["be applying"]'> (be applying / have applied) to all areas of their learning throughout their lives. Another important soft skill that music lessons teach is teamwork. <input type="text" id="wb_g4_7" data-answers='["should students"]'> (Should students / Students should) have the opportunity to join an ensemble, orchestra or other group, they can learn how to collaborate and recognise that a group is much more than the sum of its parts.
+      <br><br>
+      In addition, music lessons encourage students to have a good understanding of a range of musical genres and develop individual tastes and preferences. Some of the best school music programmes make a powerful contribution across the curriculum, successfully <input type="text" id="wb_g4_8" data-answers='["linking"]'> (linked / linking) music studies with the history of art, and even history in general. What better way <input type="text" id="wb_g4_9" data-answers='["could there be"]'> (could there be / there could be) to offer students memorable insights into great historical movements?
+      <br><br>
+      Seldom <input type="text" id="wb_g4_10" data-answers='["has a school subject been"]'> (has a school subject been / has been a school subject) more misunderstood than music. Students who have enjoyed the benefits of a musical education <input type="text" id="wb_g4_11" data-answers='["will"]'> (must / will) have learned many beneficial and far-reaching lessons.
+    </div>
+    <p class="instruction">Listen and check:</p>
+    <audio controls src="https://www.dropbox.com/scl/fi/gcjoezmillkbul223f5pr/C1-Advanced-Reflect-on-Writing-Audio.mp3?rlkey=pysyg7ppunzfiy7ijmr5r28gv&raw=1"></audio>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g4')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g4"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 5: Proofread - Campus Clothes Swap</h3>
+    <p class="instruction">Proofread the review of a campus clothes swap event. Find and correct eleven errors.</p>
+    <div class="text-box">New to me!
+Who doesn't want to refresh their <b>(1) wardobe</b> at minimal <b>(2) cost.</b> Last weekend I attended my first ever clothes swap event, held by the Student Union. The main idea of a swap is <b>(3) to keep the unwanted clothing</b> out of the waste stream by sharing it with others.
+
+<b>(4) In case that you</b> haven't been to a swap before, it works like this. I arrived at least thirty minutes before the event begins and checked in by paying a low-cost entrance fee and presenting the items of clothing that I wanted to exchange. I received a ticket for each item accepted by the organisers. Note that they <b>(5) haven't taken</b> anything stained or torn. While the room was being prepared, I enjoyed some refreshments and a chat with the other <b>(6) attenders</b>. Of course, I was also <b>(7) having an eye on</b> what other people brought in to swap - I planned to make a run for anything intriguing later!
+
+The event was well-attended and so it took rather longer than expected to open the doors. What I'd recommend for future events <b>(8) are holding</b> the registration earlier in the day, or even the evening before. Anyway, the doors opened at last and <b>(9) rarely have seen so many</b> people move so quickly! There was a lot of adrenaline, but it was all <b>(10) quiet good-natured</b>.
+
+I ended up with <b>(11) a pink lovely party dress</b> and a comfy hoodie, in exchange for a cardigan and a t-shirt. I later saw someone in my old cardigan cycling across campus! It looked much better on her...</div>
+    <ol>
+      <li><input type="text" class="full-width" id="wb_g5_1" data-answers='["wardrobe"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_2" data-answers='["cost?", "at minimal cost?"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_3" data-answers='["to keep unwanted clothing"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_4" data-answers='["in case you"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_5" data-answers='["don\'t take", "won\'t take"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_6" data-answers='["attendees"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_7" data-answers='["keeping an eye on", "keeping an eye"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_8" data-answers='["is holding", "is to hold"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_9" data-answers='["rarely have i seen so many", "rarely have i seen"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_10" data-answers='["quite good-natured", "quite good natured"]'></li>
+      <li><input type="text" class="full-width" id="wb_g5_11" data-answers='["a lovely pink party dress"]'></li>
+    </ol>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g5')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g5"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 6: Student Email Correction</h3>
+    <p class="instruction">Read the student-written e-mail below. Correct the 10 numbered mistakes. Pay attention to the teacher's codes.</p>
+    <div class="text-box">Dear <b>1) Sir Ben Williams</b>, 
+<span class="teacher-note">Teacher: Natural - a native speaker would say/write it differently.</span>
+
+I saw your advertisement for the <b>2) big ben school of english</b> on social media. 
+<span class="teacher-note">Teacher: Punctuation (capital letters).</span>
+
+I <b>3) write</b> to ask for some more <b>4) informations</b> about your school.
+<span class="teacher-note">Teacher 3: Tense. / Teacher 4: Grammar mistake.</span>
+
+First, I would like to ask <b>5) are how many students</b> in each class. 
+<span class="teacher-note">Teacher: Word order.</span>
+
+A <b>6) school has</b> many students is attractive for me because I want to make a lot of friends.
+<span class="teacher-note">Teacher: ^ insert a word or phrase.</span>
+
+I would also like to ask about the resources of your school and the qualifications of the teachers... Finally, I would like to ask about the program, and the <b>7) amenties</b> in the local <b>8) country</b>. 
+<span class="teacher-note">Teacher 7: Spelling. / Teacher 8: Wrong word.</span>
+
+So please <b>9) tell to me</b> what is included in the price and what I can do in my free time.
+<span class="teacher-note">Teacher: Word - there is an extra word please remove it.</span>
+
+Thank you very much for your help in this matter. I am <b>10) looking forward to go</b> to your school.
+<span class="teacher-note">Teacher: Grammar mistake.</span>
+
+Best wishes,
+Natasha</div>
+    <ol>
+      <li><input type="text" class="full-width" id="wb_g6_1" data-answers='["dear sir/madam,", "dear mr williams,", "dear sir/madam", "dear mr williams"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_2" data-answers='["big ben school of english"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_3" data-answers='["am writing", "\'m writing", "i am writing", "i\'m writing"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_4" data-answers='["information"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_5" data-answers='["how many students are", "how many students there are", "i would like to ask how many students are in each class", "i would like to ask how many students there are in each class"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_6" data-answers='["school that has", "school which has", "a school that has", "a school which has"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_7" data-answers='["amenities"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_8" data-answers='["area", "town"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_9" data-answers='["tell me", "so please tell me"]'></li>
+      <li><input type="text" class="full-width" id="wb_g6_10" data-answers='["looking forward to going", "i am looking forward to going"]'></li>
+    </ol>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g6')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g6"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 7: Rephrasing</h3>
+    <p class="instruction">Rewrite the sentences following the teacher's advice in italics.</p>
+    
+    <p>1. During a stressful time like this, everyone should make sure that they look after both their mind and body. <br>
+    <span class="teacher-note">Please rephrase this more formally 4 words, the final word has a hyphen.</span><br>
+    <input type="text" class="full-width" id="wb_g7_1" data-answers='["during a stressful time like this, everyone should make sure that they look after both their mental and physical well-being.", "mental and physical well-being.", "mental and physical well-being"]'></p>
+
+    <p>2. Most people study English so they can get a better job.<br>
+    <span class="teacher-note">Could you use a cleft sentence here to explain why? It would make more of an impact.</span><br>
+    <input type="text" class="full-width" id="wb_g7_2" data-answers='["the reason most people study english is to get a better job", "the reason that most people study english is so they can get a better job", "the reason why most people study english is to get a better job"]'></p>
+
+    <p>3. If you don't get it, just ask the teacher.<br>
+    <span class="teacher-note">Phrases with GET are usually informal.</span><br>
+    <input type="text" class="full-width" id="wb_g7_3" data-answers='["if you don\'t understand, just ask the teacher", "if you do not understand something, just ask the teacher", "if you don\'t understand something, just ask the teacher."]'></p>
+
+    <p>4. My parents asked me, "Do you have any homework?"<br>
+    <span class="teacher-note">Please rewrite this as an indirect question.</span><br>
+    <input type="text" class="full-width" id="wb_g7_4" data-answers='["my parents asked me if i had any homework", "my parents asked if i had any homework", "my parents asked whether i had any homework", "my parents asked me whether i had any homework"]'></p>
+
+    <p>5. Once you have had a nice walk outdoors, you will feel ready to get down to studying.<br>
+    <span class="teacher-note">Think about how you can avoid using this phrasal verb - it's quite informal.</span><br>
+    <input type="text" class="full-width" id="wb_g7_5" data-answers='["once you have had a nice walk outdoors, you will feel ready to begin studying", "once you have had a nice walk outdoors, you will feel ready to start studying", "once you have had a nice walk outdoors, you will feel ready to begin studying.", "once you have had a nice walk outdoors, you will feel ready to start studying."]'></p>
+
+    <p>6. People often have a lot of worried feelings before they take an exam.<br>
+    <span class="teacher-note">Please rephrase this as one word.</span><br>
+    <input type="text" class="full-width" id="wb_g7_6" data-answers='["people often have a lot of anxiety before they take an exam", "people often have anxiety before they take an exam", "anxiety"]'></p>
+
+    <p>7. I'm feeling both nervous and excited right now, and I expect you're feeling the same!<br>
+    <span class="teacher-note">Make sure you show the examiner that you understand how punctuation can express a more formal style.</span><br>
+    <input type="text" class="full-width" id="wb_g7_7" data-answers='["i am feeling both nervous and excited right now, and i expect you are feeling the same.", "i am feeling both nervous and excited right now, and i expect you are feeling the same"]'></p>
+
+    <p>8. The teacher instructed us to write in pencil.<br>
+    <span class="teacher-note">This would be better as a passive.</span><br>
+    <input type="text" class="full-width" id="wb_g7_8" data-answers='["we were instructed to write in pencil", "we were instructed to write in pencil."]'></p>
+
+    <p>9. There will be someone in the room to watch people taking the exam.<br>
+    <span class="teacher-note">Please rephrase this more formally using a verb + noun collocation.</span><br>
+    <input type="text" class="full-width" id="wb_g7_9" data-answers='["there will be someone in the room to supervise candidates taking the exam", "there will be someone in the room to supervise students taking the exam", "supervise candidates", "supervise students"]'></p>
+
+    <p>10. What every student waits for is the summer holidays, but exams come first.<br>
+    <span class="teacher-note">In this case, it would be more natural to use a phrasal verb. Can you remember the correct one? We often use it in emails and letters.</span><br>
+    <input type="text" class="full-width" id="wb_g7_10" data-answers='["what every student looks forward to is the summer holidays, but exams come first", "what every student looks forward to is the summer holidays, but exams come first."]'></p>
+
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g7')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g7"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+
+  <div class="exercise">
+    <h3>Activity 8: Article Gap Fill: Quitting social media</h3>
+    <p class="instruction">Complete this article with the missing words based on the initial letter.</p>
+    <div style="background:#f8fafc; padding:15px; border-radius:5px; line-height: 2;">
+      Lots of people have expressed <b>1) (c)</b><input type="text" id="wb_g8_1" data-answers='["concerns", "oncerns"]' style="width:120px"> about the amount of time they spend on social media. The person who made me question my own use was an expert in addiction. In a recent podcast, she said the amount of time people spent online was directly related to the state of their mental <b>2) (h)</b><input type="text" id="wb_g8_2" data-answers='["health", "ealth"]' style="width:120px">. People who spent more time on their devices were more likely to suffer from <b>3) (d)</b><input type="text" id="wb_g8_3" data-answers='["depression", "epression"]' style="width:120px"> - this effect was stronger for young people.
+      <br><br>
+      So, I decided to completely get <b>4) (r)</b><input type="text" id="wb_g8_4" data-answers='["rid", "id"]' style="width:120px"> of social media apps on all of my <b>5) (d)</b><input type="text" id="wb_g8_5" data-answers='["devices", "evices"]' style="width:120px">, although I still used them for e-mails and phone calls. It was hard at first, especially when I knew my friends were <b>6) (p)</b><input type="text" id="wb_g8_6" data-answers='["posting", "osting"]' style="width:120px"> fun stuff and sharing <b>7) (i)</b><input type="text" id="wb_g8_7" data-answers='["images", "mages"]' style="width:120px">. But I stuck with it and started to do things I didn't usually get the <b>8) (c)</b><input type="text" id="wb_g8_8" data-answers='["chance", "hance"]' style="width:120px"> to do - cooking, exercise, and face-to-face chats. It felt amazing.
+      <br><br>
+      Some of my friends are very worried about what their kids are <b>9) (v)</b><input type="text" id="wb_g8_9" data-answers='["viewing", "iewing"]' style="width:120px"> online - it's hard to avoid inappropriate <b>10) (c)</b><input type="text" id="wb_g8_10" data-answers='["content", "ontent"]' style="width:120px">. I would encourage the whole family to see the benefits of quitting social media for themselves.
+    </div>
+    <button class="check-btn" onclick="checkGroupAnswers('wb_g8')">Check Answers</button>
+    <div class="success-bar-container" id="bar_wb_g8"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+  </div>
+</div>
+<!-- TAB 2: WRITING LABS -->
+<div id="tab-labs" class="tab-content">
+  <h2>Writing Labs</h2>
+  <div class="progress-text">Section 2 Progress: <span id="sec2-progress-text">0%</span></div>
+  <div class="progress-container"><div class="progress-bar" id="sec2-progress-bar"></div></div>
+
+  <!-- BANNER 1: ESSAY -->
+  <button class="banner-btn b-pastel-1" onclick="toggleBanner('content-essay')">1. Essay</button>
+  <div id="content-essay" class="banner-content">
+    <div class="exercise">
+      <h3>Video: How to write an essay</h3>
+      <iframe src="https://www.youtube.com/embed/UuOWNNvupik" height="315" allowfullscreen></iframe>
+      
+      <h4>1. The Anatomy of a Great Essay</h4>
+      <div class="text-box">
+        <p>Before you write your essay, review these structural rules to ensure your text is clear, engaging, and highly rated.</p>
+        <p><b>The Golden Rules</b><br>
+        • Tone and Register: Keep it formal, academic, and objective. Avoid using contractions (e.g., use "do not" instead of "don't") and stay away from slang or overly emotional language.<br>
+        • Clarity: Your reader should be able to follow your logic effortlessly. Use linking words to connect your sentences.</p>
+        <p><b>The Classic 4-Paragraph Structure</b><br>
+        • Paragraph 1: Introduction. Hook the reader. Introduce the general topic and state clearly what the essay will discuss. Tip: Never copy the prompt word for word; always paraphrase.<br>
+        • Paragraph 2: First Main Point. Introduce your first argument or aspect of the topic. Provide detailed background information, a clear reason, and an example to support it.<br>
+        • Paragraph 3: Second Main Point. Present your second argument. You can contrast it with the first point or add a new perspective. Remember to back it up with evidence or logical reasoning.<br>
+        • Paragraph 4: Conclusion. Summarize your main arguments briefly. Crucial rule: You must state a clear final opinion or conclusion based on what you discussed, giving a clear reason why.</p>
+        <p><b>Useful Vocabulary & Linkers</b><br>
+        Starting your essay: It is often said that... / ...is a hotly-debated topic that often divides opinion.<br>
+        Developing your points: It is common knowledge that... / Another factor to consider is...<br>
+        Concluding your essay: All things considered... / Therefore, I would argue that...</p>
+      </div>
+
+      <h4>2. Knowledge Check</h4>
+      <p class="instruction">Before you start writing, check your understanding of the essential essay rules. Select True or False.</p>
+      <ol>
+        <li>You should use a conversational tone and lots of contractions (like "can't" or "won't") to make the essay sound natural.<br>
+          <input type="text" class="full-width" id="wl_k1" data-answers='["false"]'>
+        </li>
+        <li>When writing the introduction, you should paraphrase the prompt rather than copying the exact words.<br>
+          <input type="text" class="full-width" id="wl_k2" data-answers='["true"]'>
+        </li>
+        <li>In the conclusion, you should introduce completely new arguments that you didn't mention in the body paragraphs.<br>
+          <input type="text" class="full-width" id="wl_k3" data-answers='["false"]'>
+        </li>
+      </ol>
+      <button class="check-btn" onclick="checkGroupAnswers('wl_k')">Check Answers</button>
+      <div class="success-bar-container" id="bar_wl_k"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+
+      <h4>Language Check Criteria</h4>
+      <table>
+        <tr><th>Criteria</th><th>Description</th></tr>
+        <tr><td>Content</td><td>The content is relevant. The target reader is fully informed. All points in the instructions are covered.</td></tr>
+        <tr><td>Communicative achievement</td><td>The writing follows the conventions of the task in terms of layout on the page and register or style. The writing achieves its purpose. The writing holds the attention of the target reader by communicating complex ideas effectively and convincingly.</td></tr>
+        <tr><td>Organisation</td><td>The text is well-organised with a clear structure, including effective use of paragraphs. Linking words connect ideas. Coherence is maintained via a range of grammatical, lexical and rhetorical devices.</td></tr>
+        <tr><td>Language</td><td>There is a wide range of expression, used naturally and accurately. Errors are very rare and do not stop the reader understanding the text.</td></tr>
+      </table>
+
+      <h4>Task 1: Young People's Diet</h4>
+      <p class="instruction">You must answer this question. Write your answer in 220-260 words in an appropriate style.</p>
+      <div class="text-box">
+        <p>Your class has watched a documentary on young people's diet and the related decline in their health and well-being. You have made the notes below.</p>
+        <p><b>How do these affect young people's food choices?</b><br>
+        - Advertising on the internet and TV<br>
+        - Vending machines at schools and colleges<br>
+        - Supermarket checkout displays</p>
+        <p><b>Some opinions expressed in the documentary:</b><br>
+        "You don't have to buy everything you see advertised."<br>
+        "It's more convenient to get a snack from a machine than to bring one from home."<br>
+        "There's no reason why they couldn't display nuts or fruit at the checkout."</p>
+        <p>Write an essay discussing two of the factors in your notes. You should explain which factor has the greatest negative effect on young people's health and well-being, giving reasons in support of your answer. You may, if you wish, make use of the opinions expressed in the discussion, but you should use your own words as far as possible.</p>
+      </div>
+      <textarea id="wl_essay_task" placeholder="Write your essay here..."></textarea>
+      <button onclick="sendEmail('wl_essay_task', 'Essay Task')">Submit Essay to Teacher</button>
+      <br>
+      <a href="https://writeandimprove.com/workbooks#/wi-workbooks/bdc648bc-b760-4bac-98bc-161a95deff5e/tasks/69590726-4462-4da9-bbd6-9249e72a639b" target="_blank" class="cambridge-btn" id="btn_camb_essay" onclick="trackLinkClick('btn_camb_essay')">Now go to Cambridge Lab</a>
+    </div>
+  </div>
+
+  <!-- BANNER 2: FORMAL EMAIL -->
+  <button class="banner-btn b-pastel-2" onclick="toggleBanner('content-email')">2. Formal Email</button>
+  <div id="content-email" class="banner-content">
+    <div class="exercise">
+      <h3>Video: How to write a formal email</h3>
+      <iframe src="https://www.youtube.com/embed/QKNgsOqii3Y" height="315" allowfullscreen></iframe>
+      
+      <h4>Write a letter/email requesting more information and asking for some answers to specific questions (140-190 words).</h4>
+      <div class="text-box">
+        <p><b>Cycling holidays in England</b></p>
+        <p>We offer 1- and 2-week guided holiday packages cycling through 1) "England's green and pleasant land" during 2) June, July and August.</p>
+        <p>Available for different levels:<br>
+        • 3) 10 km/day<br>
+        • 15 km/day<br>
+        • 20+ km/day</p>
+        <p>4) Overnight stays in 2- and 3-star guest houses.</p>
+      </div>
+
+      <h4>Part A: Read the first paragraph of this model answer. Has the writer used an appropriate style?</h4>
+      <div class="text-box">
+        <p>Dear Sir/Madam,</p>
+        <p>I saw your recent advertisement in National Geographic magazine and I am writing to ask for some more information about the guided cycling holidays which you offer.</p>
+        <p>In which areas of England do you offer cycling tours? I'm an inexperienced cyclist and wouldn't be able to undertake a very difficult tour. Is 10 kilometres per day suitable for beginners?</p>
+        <p>What about departure dates? I'm only able to take a holiday in July. On which dates in July do your tours begin?</p>
+        <p>Finally, how much do meals cost? I see that accommodation is provided in guest houses, but do you include the price of dinner and breakfast in the holiday? I eat a lot - LOL!</p>
+        <p>Thanks very much for your help in this matter. I look forward to hearing from you at your convenience.</p>
+        <p>All my love,<br>Anna</p>
+      </div>
+
+      <h4>Part B: How is formal style achieved?</h4>
+      <p class="instruction">Put True or False next to each statement below.</p>
+      <ol>
+        <li>You use "Dear Sir/Madam," as a greeting when you don't know the name of the recipient. <br><input type="text" id="wl_em_1" data-answers='["true"]'></li>
+        <li>If you know the person's name (e.g. John Hall), you should write "Dear Mr John," as a greeting. <br><input type="text" id="wl_em_2" data-answers='["false"]'></li>
+        <li>You should use contractions and short forms. <br><input type="text" id="wl_em_3" data-answers='["false"]'></li>
+        <li>You should use indirect questions (e.g. "Could you tell me what....?" instead of "What....?"). <br><input type="text" id="wl_em_4" data-answers='["true"]'></li>
+        <li>You should avoid using passives. <br><input type="text" id="wl_em_5" data-answers='["false"]'></li>
+        <li>You can make one joke, but not about politics. <br><input type="text" id="wl_em_6" data-answers='["false"]'></li>
+        <li>You should not refer to personal relationships. <br><input type="text" id="wl_em_7" data-answers='["true"]'></li>
+        <li>You can use emotional language. <br><input type="text" id="wl_em_8" data-answers='["false"]'></li>
+        <li>You can close with "Yours faithfully," or "Best regards," if you don't know the name of the recipient. <br><input type="text" id="wl_em_9" data-answers='["true"]'></li>
+        <li>You should use your first name and last name/surname in the closing. <br><input type="text" id="wl_em_10" data-answers='["true"]'></li>
+      </ol>
+      <button class="check-btn" onclick="checkGroupAnswers('wl_em')">Check Answers</button>
+      <div class="success-bar-container" id="bar_wl_em"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+
+      <h4>Part C: Read the rest of the model answer to identify style errors and improve the text</h4>
+      <div class="text-box">
+        <p><b>Instructions:</b><br>
+        a. Avoid contractions and short forms - how many changes do you need to make?<br>
+        b. Use indirect questions - rewrite the five questions to make them more formal (e.g., I would like to ask...).<br>
+        c. Use passives: rewrite "Do you include the price of dinner..."<br>
+        d. Find an example of a joke in the email. Is this appropriate?<br>
+        e. Closing: change the closing to a more appropriate style.</p>
+      </div>
+      <textarea id="wl_email_partc" placeholder="Rewrite the email applying all the improvements..."></textarea>
+      <button onclick="sendEmail('wl_email_partc', 'Email Part C Correction')">Submit Correction to Teacher</button>
+
+      <h4>Task: Walking Tours of Scotland</h4>
+      <p class="instruction">Now plan and write this formal email task (140-190 words).</p>
+      <div class="text-box">
+        <p><b>Walking Tours of Scotland</b><br>
+        We offer 10-day walking tours through some of the most glorious mountain scenery in Scotland. Choose from departure dates throughout the summer.</p>
+        <p>We generally walk around 15 km/day, but we can also arrange different levels on request:<br>
+        • Gentle - 10 km/day<br>
+        • Expert - 20 km +/day</p>
+        <p>Accommodation is provided in 2- and 3-star guest houses. For more details, contact Jack Stirling: information@walk.scotland.co.uk</p>
+        <p><b>Notes to include:</b> Which part of Scotland? | Departure dates in June? | Special equipment needed for expert level? | Accommodation - single beds or double beds?</p>
+      </div>
+      <textarea id="wl_email_task" placeholder="Dear Mr Stirling..."></textarea>
+      <button onclick="sendEmail('wl_email_task', 'Formal Email Task')">Submit Email to Teacher</button>
+      <br>
+      <a href="https://writeandimprove.com/workbooks#/wi-workbooks/bdc648bc-b760-4bac-98bc-161a95deff5e/tasks/6a06cd70-034f-488d-b6ff-ec38e27a0a4a" target="_blank" class="cambridge-btn" id="btn_camb_email" onclick="trackLinkClick('btn_camb_email')">Now go to Cambridge Lab</a>
+    </div>
+  </div>
+
+  <!-- BANNER 3: SUMMARY -->
+  <button class="banner-btn b-pastel-3" onclick="toggleBanner('content-summary')">3. Summary</button>
+  <div id="content-summary" class="banner-content">
+    <div class="exercise">
+      <h3>Video & Audio: Are teenagers really lazy?</h3>
+      <iframe src="https://www.youtube.com/embed/SmnR4AZ-XM8" height="315" allowfullscreen></iframe>
+      <audio controls src="https://www.linguahouse.com/esl-lesson-plans/english-for-teenagers/are-teenagers-really-lazy/audioplayer/the-active-audio-bemp3"></audio>
+      
+      <h4>Part 1</h4>
+      <p class="instruction">You are going to listen to the audio file or watch a video about teenagers and sport. Think about where you live. Which sentences are true?</p>
+      <label><input type="checkbox" id="sum_p1_1" onchange="updateGlobalProgress()"> 1. Sports centres are too expensive.</label><br>
+      <label><input type="checkbox" id="sum_p1_2" onchange="updateGlobalProgress()"> 2. Sports centres are too far away from where I live.</label><br>
+      <label><input type="checkbox" id="sum_p1_3" onchange="updateGlobalProgress()"> 3. There should be more sports centres.</label><br>
+      <label><input type="checkbox" id="sum_p1_4" onchange="updateGlobalProgress()"> 4. The sports centres near me aren't very good.</label><br>
+
+      <h4>Part 2: Watch the video again. Are the statements true (T) or false (F)?</h4>
+      <ol>
+        <li>Nobody has asked teenagers what they need to stay fit and healthy.<br><input type="text" id="wl_sum_1" data-answers='["false", "f"]'></li>
+        <li>Teenagers are unhappy with the things they have to do sport in their area.<br><input type="text" id="wl_sum_2" data-answers='["true", "t"]'></li>
+        <li>Teenagers feel comfortable going to gyms.<br><input type="text" id="wl_sum_3" data-answers='["false", "f"]'></li>
+        <li>Teenagers can easily walk to places.<br><input type="text" id="wl_sum_4" data-answers='["false", "f"]'></li>
+        <li>Teenagers would like to try a variety of things.<br><input type="text" id="wl_sum_5" data-answers='["true", "t"]'></li>
+        <li>Teenagers like sports with lots of rules.<br><input type="text" id="wl_sum_6" data-answers='["false", "f"]'></li>
+      </ol>
+      <button class="check-btn" onclick="checkGroupAnswers('wl_sum')">Check Answers</button>
+      <div class="success-bar-container" id="bar_wl_sum"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
+
+      <h4>Task: Summary</h4>
+      <p class="instruction">Write a Summary about the video/audio com foco em caracteristicas do abitur summary.</p>
+      <textarea id="wl_summary_task" placeholder="Write your summary here..."></textarea>
+      <button onclick="sendEmail('wl_summary_task', 'Summary Task')">Submit Summary to Teacher</button>
+      <br>
+      <a href="https://writeandimprove.com/workbooks#/wi-workbooks/bdc648bc-b760-4bac-98bc-161a95deff5e/tasks/69fd8cb2-b060-4d0c-9e12-92fe249fa631" target="_blank" class="cambridge-btn" id="btn_camb_sum" onclick="trackLinkClick('btn_camb_sum')">Now go to Cambridge Lab</a>
+    </div>
+  </div>
+<br>
+          <button onclick="sendEmailGroup(['wl_essay_task', 'wl_email_partc', 'wl_email_task', 'wl_summary_task'], 'Writing Labs Submissions')">Submit All Writing Labs text areas to Teacher</button>
+        </div>
+<!-- TAB 3: EXAM MAXIMIZER -->
+<div id="tab-texts" class="tab-content">
+  <h2>Exam Maximizer: Analysis & Evaluation</h2>
+  <div class="progress-text">Section 3 Progress: <span id="sec3-progress-text">0%</span></div>
+  <div class="progress-container"><div class="progress-bar" id="sec3-progress-bar"></div></div>
+
+  <!-- BANNER TEXT I -->
+  <button class="banner-btn b-pastel-4" onclick="toggleBanner('content-text1')">Text I: Obama's Farewell Speech</button>
+  <div id="content-text1" class="banner-content">
+    <div class="exercise">
+      <h3>Obama's Farewell Speech (Jan 10, 2017)</h3>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://www.nobelprize.org/images/obama-15143-portrait-medium.jpg" alt="Barack Obama" style="float: right; width: 180px; margin: 0 0 15px 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p>"[...] tonight, it's my turn to say thanks. Whether we have seen eye-to-eye or rarely agreed at all, my conversations with you, the American people, in living rooms and in schools, at farms, on factory floors, at diners and on distant military outposts - those conversations are what have kept me honest, and kept me inspired, and kept me going. And every day, I have learned from you.</p>
+        <p>I learned that change only happens when ordinary people get involved and they get engaged, and they come together to demand it. After eight years as your President, I still believe that. And it's not just my belief. It's the beating heart of our American idea - our bold experiment in self-government. It's the conviction that we are all created equal, endowed by our Creator with certain unalienable rights, among them life, liberty, and the pursuit of happiness. It's the insistence that these rights, while self-evident, have never been self-executing; that We, the People, through the instrument of our democracy, can form a more perfect union.</p>
+        <p>For 240 years, our nation's call to citizenship has given work and purpose to each new generation. It's what led patriots to choose republic over tyranny, pioneers to trek west, slaves to brave that makeshift railroad to freedom. It's what pulled immigrants and refugees across oceans and the Rio Grande. It's what pushed women to reach for the ballot. It's what powered workers to organize. It's why GIs gave their lives at Omaha Beach and Iwo Jima, Iraq and Afghanistan. And why men and women from Selma to Stonewall were prepared to give theirs, as well.</p>
+        <p>So that's what we mean when we say America is exceptional - not that our nation has been flawless from the start, but that we have shown the capacity to change and make life better for those who follow. Yes, our progress has been uneven. The work of democracy has always been hard. It's always been contentious. Sometimes it's been bloody. For every two steps forward, it often feels we take one step back. But the long sweep of America has been defined by forward motion, a constant widening of our founding creed to embrace all and not just some.</p>
+        <p>That's what I want to focus on tonight: The state of our democracy. Understand, democracy does not require uniformity. Our founders argued. They quarreled. Eventually they compromised. They expected us to do the same. But they knew that democracy does require a basic sense of solidarity - the idea that for all our outward differences, we're all in this together; that we rise or fall as one.</p>
+        <p>Our democracy is threatened whenever we take it for granted. All of us, regardless of party, should be throwing ourselves into the task of rebuilding our democratic institutions. Our Constitution is a remarkable, beautiful gift. But it's really just a piece of parchment. It has no power on its own. We, the people, give it power. We, the people, give it meaning.</p>
+        <p>Because for all our outward differences, we, in fact, all share the same proud title, the most important office in a democracy: Citizen. Citizen. So, you see, that's what our democracy demands. It needs you. Not just when there's an election, not just when your own narrow interest is at stake, but over the full span of a lifetime. If you're tired of arguing with strangers on the Internet, try talking with one of them in real life. If something needs fixing, then lace up your shoes and do some organizing. If you're disappointed by your elected officials, grab a clipboard, get some signatures, and run for office yourself. Show up. Dive in. Stay at it.</p>
+        <p>My fellow Americans, it has been the honor of my life to serve you. I won't stop. In fact, I will be right there with you, as a citizen, for all my remaining days. But for now, whether you are young or whether you're young at heart, I do have one final ask of you as your President - the same thing I asked when you took a chance on me eight years ago. I'm asking you to believe. Not in my ability to bring about change - but in yours.</p>
+        <p>I am asking you to hold fast to that faith written into our founding documents; that idea whispered by slaves and abolitionists; that spirit sung by immigrants and homesteaders and those who marched for justice; that creed reaffirmed by those who planted flags from foreign battlefields to the surface of the moon; a creed at the core of every American whose story is not yet written: Yes, we can.</p>
+        <hr style="border-top: 1px solid #cbd5e1; margin: 15px 0;">
+        <div style="font-family: system-ui, sans-serif; font-size: 0.9em; padding-left: 30px;">
+          <b>Annotations:</b><br>
+          • <b>Rio Grande:</b> river running along the border between the USA and Mexico<br>
+          • <b>Omaha Beach:</b> name the allies gave to a beach in Normandy, France, where they landed on 6 June 1944, which was decisive for ending WW II in Europe<br>
+          • <b>Iwo Jima:</b> Pacific Island where the USA and Japan fought a decisive battle in WW II<br>
+          • <b>Selma:</b> city in Alabama, the starting point of a Civil Rights protest march<br>
+          • <b>Stonewall:</b> short for Stonewall Inn, a bar where in 1969 a group of homosexual and transgender people put up resistance against police violence
+        </div>
+      </div>
+
+      <details style="margin-bottom: 15px;"><summary style="font-weight:bold; cursor:pointer; color:var(--primary);">View Task Guides & Model Answers</summary>
+        <div style="padding: 15px; border: 1px solid #cbd5e1; background: #fff; margin-top: 10px; border-radius: 4px;">
+          <h4>Task 1 Guide: Comprehension (Summary)</h4>
+          <p><b>TASK 1 RULE: Zero Opinion!</b> Never use "I think" or "In my opinion". Your job is to mirror the text objectively. Use neutral verbs: The author claims, states, points out, argues. Keep your tenses consistent, primarily using the Simple Present.</p>
+          <p><b>Model Answer 1: Following the Line of Argumentation (Chronological)</b><br>
+          In his farewell speech, Barack Obama defines democracy as a dynamic process driven by its people rather than a static set of rules. He begins by stating that change occurs only when ordinary people become involved and demand it. This system is fundamentally rooted in the conviction that all individuals are created equal and possess unalienable rights...</p>
+          
+          <h4>Task 2 Guide: Analysis</h4>
+          <p><b>TASK 2 RULE: The P.E.E. Method</b><br>
+          Do not just list rhetorical devices. For every device you find, apply this formula:<br>
+          <b>Point:</b> Identify the device and its general function.<br>
+          <b>Evidence:</b> Provide the exact quote and paragraph number (e.g., cf. para. 2).<br>
+          <b>Explanation:</b> Explain the specific effect on the reader (e.g., This evokes a feeling of...).</p>
+          <p><i>Structural Devices:</i> Anaphora, Parallelism, Enumeration, Tricolon.<br>
+          <i>Imagery and Comparison:</i> Metaphor, Personification, Simile.<br>
+          <i>Persuasive & Intellectual Devices:</i> Antithesis, Rhetorical Question, Allusion, Hyperbole.</p>
+        </div>
+      </details>
+
+      <p class="instruction"><b>Task 1:</b> Summarise what democracy is about according to Barack Obama.</p>
+      <textarea id="em_t1_summary" placeholder="Your summary..."></textarea>
+      <button onclick="sendEmail('em_t1_summary', 'Text 1: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2:</b> Analyse the strategies and rhetorical devices used to strengthen ideas.</p>
+      <textarea id="em_t1_analysis" placeholder="Your analysis..."></textarea>
+      <button onclick="sendEmail('em_t1_analysis', 'Text 1: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>
+      a) Comment (Argumentative Essay): In his farewell speech, Barack Obama states: "Our democracy is threatened whenever we take it for granted." Taking this statement as a starting point, write a comment discussing the importance of active political participation among young people today. Do we take our democratic rights for granted?<br>
+      b) Blog Entry: Write a blog entry reacting to Obama's appeal: "If you're tired of arguing with strangers on the Internet, try talking with one of them in real life." Evaluate the impact of social media on democratic discussions and urge your readers to engage in real-life political action.</p>
+      <textarea id="em_t1_eval" placeholder="Write your evaluation here..."></textarea>
+      <button onclick="sendEmail('em_t1_eval', 'Text 1: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+
+  <!-- BANNER TEXT II -->
+  <button class="banner-btn b-pastel-5" onclick="toggleBanner('content-text2')">Text II: For something so hollow, the royal family is astonishingly expensive</button>
+  <div id="content-text2" class="banner-content">
+    <div class="exercise">
+      <h3>For something so hollow, the royal family is astonishingly expensive</h3>
+      <p style="color:#64748b;">(By Polly Toynbee | April 20, 2023, The Guardian)</p>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://i.guim.co.uk/img/media/35a14d23ac717c6e5c53d551bc860aba1bb3aed1/0_766_6193_3716/master/6193.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=f07fd4fd2bae28869e6cb74b96629b41" alt="Anti-monarchy protest" style="float: left; width: 250px; margin: 0 15px 15px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p>The trouble with the monarchy is not that it is too powerful but that it is utterly useless, a worthless vacuum shrouded in ceremony.</p>
+        <p>"Not My King," say the yellow T-shirts of the anti-monarchists TV cameras may swerve around in the coronation crowds. But he is our king, willy-nilly, like it or not, as he and his family are our dependants. The Guardian's deep dive into the royal family's finances shows our monarchy costs a fortune, more than anyone else's in Europe.</p>
+        <p>The Borbones of Spain cost a mere £7.4m a year, while we pay our Windsors a very pricey £86m. (...) That's not much really, monarchists may claim. Out of £1tn in annual government spending, the royals' consumption of taxpayers money is a mere (...) fleabite.</p>
+        <p>If that's what the royals think, you might wonder why they are so exceptionally secretive about anything touching on their wealth and incomes. Why are the wills of even obscure royals locked away from the public gaze? It may be because they think that most of their subjects would consider their incomes vast.</p>
+        <p>How big? Just £1m of the king's income would buy five AgeUK day centres, reopening ones shut by austerity. Or it could train 250 early years educators for nurseries, says the Early Years Alliance. Just one of his millions would pay for 25,000 GP appointments, says the King's Fund. The annual public funding for the royals would pay for 30 hours of childcare per week for almost 13,000 three- and four-year-olds for a year, says the IFS. The king is paid more than the cost of all London's street lighting. (...) Money spent on the monarchy seems a lot or a little depending on whether you think one king is worth more than 4,000 teachers.</p>
+        <p>Protesters unfurled a banner on the spot in Westminster Abbey where the king will be crowned, reading: "Would you vote for him?" For fear that people might ask themselves that question, no split second was allowed between the last breath of the late Queen and proclaiming Charles King. She was not, after all, to be Elizabeth the last, so we face the prospect of three elderly men in a row being crowned in their 60s and 70s, stretching out to the century's end. That's not what the young predict, with YouGov finding that 40% of under-25s want the monarchy abolished. Though the crown stands on a solid 60% support, that's quite a steep falling off from 75% a decade ago.</p>
+        <p>The trouble with the monarchy is not that it is too powerful but that it is utterly useless. So much is spent on ceremonial trappings to disguise its inner nothingness. We could have commissioned a neverending soap opera of The Crown, like The Truman Show, inventing its own plotlines in a plywood set at a fraction of the cost. All ermine and no knickers is what we've got, anyway.</p>
+        <p>My truth is that we are a country too bewitched by a phantasmagoria of majesty that encourages a national self-deceit about our power and importance in the world. All that ceremonial grandeur incites the state of mind that misled half the country to believe Britain could rule the waves again, all alone and bravely Brexiteering away from our continent. (...)</p>
+        <p>Though 52% tell YouGov they are not interested in the coronation, expect the cameras to pick out the 15% "very interested" to represent the country's mood. But, as everyone likes an extra holiday in this miserable country with the fewest in Europe, why not enjoy a spectacle that's costing us all £100m? Just possibly, though, this time the Guardian's revelations about the high cost of our extravagant royals may grate a little more among so many struggling with unpayable bills.</p>
+      </div>
+
+      <details style="margin-bottom: 15px;"><summary style="font-weight:bold; cursor:pointer; color:var(--primary);">View Task Guides & Model Answers</summary>
+        <div style="padding: 15px; border: 1px solid #cbd5e1; background: #fff; margin-top: 10px; border-radius: 4px;">
+          <h4>Task 1: The Perfect Start (TATTE Formula)</h4>
+          <p>Every summary must begin with a single sentence covering: <b>T</b>-Title, <b>A</b>-Author, <b>T</b>-Text Type, <b>T</b>-Topic, <b>E</b>-Explanation.<br>
+          <i>Example Answer:</i> In her polemic article "For something so hollow...", published in The Guardian, Polly Toynbee presents a scathing critique of the British monarchy, defining it as an obsolete, financially draining, and socially corrosive institution...</p>
+          <h4>Task 2: Analyzing Effect</h4>
+          <p>Stop saying "The reader feels...". Use professional phrases: "This evokes a sense of indignation...", "The metaphor underscores the absurdity of...", "The author aims to provoke a critical reaction..."</p>
+        </div>
+      </details>
+
+      <p class="instruction"><b>Task 1:</b> Outline Toynbee's criticism on the monarchy.</p>
+      <textarea id="em_t2_summary"></textarea>
+      <button onclick="sendEmail('em_t2_summary', 'Text 2: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2:</b> Analyse how the author conveys her criticism.</p>
+      <textarea id="em_t2_analysis"></textarea>
+      <button onclick="sendEmail('em_t2_analysis', 'Text 2: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>
+      Choose one of the following tasks:<br>
+      a. The British historian, Dr. Thomas Ainsley, states: "Being a royal means living in a golden cage. You may be rich and admired, but your life is controlled by rules, expectations, and centuries-old traditions. Is that a life of privilege - or a life of sacrifice?" Discuss the role that the royal family plays today.<br>
+      b. Write an e-mail by a student to Toynbee in which he or she comments on her article.</p>
+      <textarea id="em_t2_eval"></textarea>
+      <button onclick="sendEmail('em_t2_eval', 'Text 2: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+
+  <!-- BANNER TEXT III -->
+  <button class="banner-btn b-pastel-1" onclick="toggleBanner('content-text3')">Text III: In Nigeria, colonial thinking affects everyone. It is time we found new heroes</button>
+  <div id="content-text3" class="banner-content">
+    <div class="exercise">
+      <h3>In Nigeria, colonial thinking affects everyone. It is time we found new heroes</h3>
+      <p style="color:#64748b;">(By Eniola Anuoluwapo Soyemi | Jul 20, 2020, The Guardian)</p>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://i.guim.co.uk/img/media/04aaf8a4f3c0727db377764c999b946083e5db5d/0_89_2784_1670/master/2784.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=7cbf56d4d20baa4d58245bff729f880b" alt="Nigeria" style="float: right; width: 250px; margin: 0 0 15px 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p>A few weeks ago, I sat in the paediatric ward of a private hospital in Lagos waiting on my then 10-week-old son's vaccinations. In the waiting room, all toys and loud crashing from US cartoons, I took in the sight of a Nigerian woman, her body tinged with the tell-tale redness of poisoned, bleached skin. Two beautiful babies sat, in car seats, at her feet.</p>
+        <p>I exclaimed, "You had twins!" I recognised her from a few weeks before, each of us in the final throes of pregnancy. "I actually had triplets," she grinned. On cue, her Nigerian husband emerged from the doctor's office carrying their third child. Awestruck, my son in my arms, I congratulated her on her strength.</p>
+        <p>She looked closer at my son and beamed, "He is beautiful." "Thank you," I agreed naively, not realising where our conversation was headed. "Look at how 'light' he is," she continued. My heart sank. "His father must be white," she persisted. I confirmed my husband was a white man from the United Kingdom. "My son will get darker and be just as lovely," uncomfortable, I tried to control the conversation. "Even if he gets darker, he will still be 'light' and beautiful," she effused. The greatest trick colonialism plays is to convince us it has really left.</p>
+        <p>My son began to cry. I was thankful. I comforted him in the language I speak to my children, leaving English to everyone else. "Pèlệ mà bínù, o ti fẹ ya ká má ló lé," I consoled him, and myself, in Yorùbá. She spoke again, "Don't talk to this fine boy in Yorùbá, please." Her words completed my dejection. "You must have a girl," she went on. "Can you imagine a girl with this skin, and long hair too?" My spirit had sunk too low to tell her that I, also, had long hair, that grows thickly up, not down, "smack you back" coily, triple black.</p>
+        <p>I looked at her triplets, neatly lined up - dark, precious in their fragility, utterly beautiful. I wondered, would their mother ever let them know, feel it?</p>
+        <p>I was unable to shake my sadness. How did we get like this, believing that we are not the mark of beauty itself - that our skin, our hair, our languages are "ugly"?</p>
+        <p>We joke about "colo mentality" in Nigeria as a problem that affects only "the ignorant masses", when, in reality, it is an affliction that excludes no one equally responsible for the most obvious displays of self-alienation, as it is for the not-so-declaratory, corrosive transformations it makes to our ideas.</p>
+        <p>Is the solution to build powerful Black nations by imitating a history of European capitalist domination and aspiring to false notions of "rationality" as espoused by European philosophy and science? Is this not, also, the result of a "colonial mentality"? Shall we counteract the violence of European colonisation by showing that we, too, can be just as exploitative, as greedy, "rational"?</p>
+        <p>I do not ask these questions to be rhetorical. I am, also, searching for answers. One of the many devastating consequences of colonialism, in its imposition of one mode of thought and way of life, attempting to destroy all others, is that it shallows our imaginations, too closely confining them to present, near-recent, experience.</p>
+        <p>It does not help that Europeans continue, in their recordings of a history of ideas, to persist in the belief of their unique mightiness. As Zophia Edwards, a sociology professor at Providence College in the United States, notes, western scholarship is replete with false notions that the most useful ideas come from the global north, only copied by the global south. Conveniently forgetting that such ideas as a universal human rights were first developed by Latin American countries.</p>
+        <p>Through wilful acts of forgetting and myth-making, and despite the evidence of our labour in the establishment of their metaphorical houses, it remains prominent in the minds of many Europeans that the current socioeconomic development of African countries is simply the result of our supposed lack of intellectual originality.</p>
+        <p>We are, in Nigeria, beginning to unmask the villains of our present predicament. They are not just the colonials - every one of them - but those, also, among our historical elite who aided and abetted colonialism. Some, like the slave trader Madam Tinubu, we have unsoundly memorialised, though by their wickedness we should have known they were not heroes. And our heroes?</p>
+        <p>I have thought of praiseworthy champions who, operating under the oppressive height of empire, must surely also have been victims of colonial brainwashing. I have thought of Samuel Ajayi Crowther, widely celebrated as Nigeria's first Anglican bishop. Of JJ Ransome-Kuti who, despite writing the Egbà national anthem, also helped further Christianity's entrance into Yorùbá culture by the Christian hymns he set to Yorùbá music. The consequences to Yorùbá religion and culture have been incalculable.</p>
+        <p>I have thought of my schooldays, of Ijeoma and Doreen, lighter-skinned girls allowed to wear their straight hair out, while the rest of us were caned if our hair was not "neat", by which was meant tidied away into cornrows. Whatever terror unbound African hair had struck in the hearts of colonial men and women, by the time of my youth, it had surely been transferred to local school administrations.</p>
+        <p>I have thought of Mr Moronfolu, and all the other authority figures, for whom flogging is a part of our "traditions" and not a dehumanising spectacle that became more widespread with colonialism, used to "tame" the "frightening and savage native" into cooperative submission.</p>
+        <p>It is not enough to reveal the lies and tear down the statues, though this we must. We have, also, to build things in their places. The political thought of the anti-apartheid activist and thinker Steve Biko contains an instructive conception of freedom that requires, first, the elevation of Black Consciousness, of Black cultures and communities, out of the false baseness they have been pushed into. Second, the thorough understanding that white people are just, well, people. That the space that they have collectively attempted to occupy in the last few hundred years is not simply one of superiority, but an attempt at being more than human. And to have done so by maintaining others in sub-human state. For everyone to be brought back to being simply, fully, but not more than, a human being, white people will need to give up instrumental power, and more a mental, religious, understanding of themselves as God-like.</p>
+        <p>If Black Consciousness, the emancipation of the Black mind, and the recovery of the true freedom of all human beings starts with correcting the obvious violences of colonisation, it is not completed until we have questioned every communal understanding we take for granted. Our real heroes cannot be left unscathed. It is daunting. We will be tired. But free.</p>
+        <p>So, I pray that my children will grow up in a world where the values we teach them are mirrored outside - that, in every fundamental aspect, all people are equal. When they inevitably find that the world is different, may their hearts not be broken. I pray they will never be taken in by false praise and will stand, unyielding, in the glory of their Black Africanness. That, regardless of how they are treated by either of their cultural heritages, they will hold fast to a universal belief in goodness, fortitude and love.</p>
+        <p>To my unborn daughter, I pray that you will have my hair - thickly coiled beyond the solitary abilities of any wide-toothed comb, beautiful as black night. But, if you do not, may you be content in knowing that your hair is no "worse", no "better".</p>
+        <hr style="border-top: 1px solid #cbd5e1; margin: 15px 0;">
+        <div style="font-family: system-ui, sans-serif; font-size: 0.9em; padding-left: 30px;">
+          <b>Annotations:</b><br>
+          • <b>Cornrows:</b> A traditional African style of hair grooming where the hair is braided very close to the scalp. The author notes how school administrations used these as a tool of "neatness" to suppress natural African hair textures.<br>
+          • <b>Global North / Global South:</b> Terms used to describe a grouping of countries along socio-economic and political lines.<br>
+          • <b>Madam Tinubu:</b> Efunroye Tinubu, a powerful 19th-century Nigerian aristocrat and slave trader.<br>
+          • <b>Samuel Ajayi Crowther:</b> A linguist and the first African Anglican bishop in Nigeria.<br>
+          • <b>Self-alienation:</b> The state of being an outsider to oneself; in this context, it refers to Black individuals rejecting their own skin, hair, and language as "ugly."<br>
+          • <b>Steve Biko:</b> A prominent South African anti-apartheid activist.
+        </div>
+      </div>
+
+      <p class="instruction"><b>Task 1: Comprehension (Summary)</b><br>Outline the author's personal experiences and her main arguments regarding how the "colonial mentality" still impacts Nigerians today.</p>
+      <textarea id="em_t3_summary"></textarea>
+      <button onclick="sendEmail('em_t3_summary', 'Text 3: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2: Analysis</b><br>Analyse how the author conveys her criticism of the colonial legacy. Focus on her use of personal anecdotes, tone, and rhetorical devices.</p>
+      <textarea id="em_t3_analysis"></textarea>
+      <button onclick="sendEmail('em_t3_analysis', 'Text 3: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>
+      Choice A: The Comment (Argumentative Essay) - Discuss how historical events shape modern cultural identity.<br>
+      Choice B: Re-creation of Text (Blog entry) - React to the statement "Our real heroes cannot be left unscathed."</p>
+      <textarea id="em_t3_eval"></textarea>
+      <button onclick="sendEmail('em_t3_eval', 'Text 3: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+
+<!-- BANNER TEXT IV -->
+  <button class="banner-btn b-pastel-2" onclick="toggleBanner('content-text4')">Text IV: Peter Morgan, The Audience (extract)</button>
+  <div id="content-text4" class="banner-content">
+    <div class="exercise">
+      <h3>The Audience (extract)</h3>
+      <p style="color:#64748b;">(From: Peter Morgan. The Audience. London: Faber & Faber, 2013.)</p>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c9/The_Audience_%28poster%29.jpg" alt="The Audience" style="float: left; width: 180px; margin: 0 15px 15px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p><b>CHURCHILL:</b> Your Majesty. The year is 1952 and sitting opposite him is the twenty-five-year-old Queen.</p>
+        <p><b>ELIZABETH:</b> Please Prime Minister (Indicating seat.) The Queen, as befits the protocol, is in mourning, and still wearing black. We are in the period of time after her father George VI's death, before her Coronation. When she speaks, we notice the voice is quieter. More uncertain. Thinner. Higher. That of a girl. I've ordered tea. Or would you prefer water?</p>
+        <p>Churchill stares in horror: 'Water?' Something stronger, perhaps?</p>
+        <p><b>CHURCHILL:</b> Oh, dear. Did no one explain? The Sovereign never offers a Prime Minister refreshment. Nor a chair. The precedent set by your great-great-grandmother was to keep us standing, like Privy Councillors. To waste time is a grievous sin. If there's one thing I have learned in fifty-two years of public service it is that there is no problem so complex nor crisis so grave that it cannot satisfactorily be resolved within twenty minutes. That was certainly also your dear father's view. Headlines only. No chat. So in respect to his memory, shall we make a start?</p>
+        <p><b>ELIZABETH:</b> Please. The Queen reaches for something.</p>
+        <p><b>CHURCHILL:</b> Second drawer. On the right.</p>
+        <p><b>ELIZABETH:</b> What?</p>
+        <p><b>CHURCHILL:</b> The notepad. Your father always took notes as I spoke.</p>
+        <p><b>ELIZABETH:</b> I wasn't looking for a notepad. I was going to get my box. The Queen bends down, picks up the Sovereign's red box. I'm sure you can imagine, most of my time since the funeral has been taken up with our move to Buckingham Palace - but I have now had the chance to read the boxes. And I have the following questions. Can you give me a date for the end of rationing of sugar, butter and meat? What more can you tell me about our development of nuclear weapons? And do you envisage a military engagement, by UN forces, against China - in support of their allies in Korea?</p>
+        <p><b>CHURCHILL:</b> No, no, stop! Goodness. Your Majesty... (A patronising laugh.) Did your father not tell you how these sessions work?</p>
+        <p><b>ELIZABETH:</b> Yes. No. This is my first.</p>
+        <p><b>CHURCHILL:</b> It's quite simple. The Prime Minister - that's me - comes to the Palace every Tuesday evening and explains what of note has transpired that past week in Cabinet, Parliament and Foreign Affairs. He then gives a brief indication of what is going to happen the following week. Throughout this the Sovereign - long may it be you - listens, makes notes, encourages and asks questions, maybe on the rare occasion expresses an opinion, then the Prime Minister goes. [...]</p>
+        <p><b>ELIZABETH:</b> [...] Wasn't it Gladstone who compared the British Prime Minister to a dictator? He was right.</p>
+        <p><b>CHURCHILL:</b> Yes, but remember this dictator is still a human being. Ambitious. Grasping. Venal. That's how he got into office. And what ambitious, self-regarding dictator could fail to be impressed by all this? (Gestures to their surroundings.) By you? (Gestures to the Queen.) To a man they will be rendered speechless. Weak-kneed. And in that moment - the dictator will be yours to shape and to steer. One by one your Prime Ministers will fall under your spell. In here. In this audience. In this room.</p>
+        <p><b>ELIZABETH:</b> Are you weak-kneed now, Mr Churchill?</p>
+        <p><b>CHURCHILL:</b> (smitten) Oh, I am, Ma'am.</p>
+        <p><b>ELIZABETH:</b> I meant literally. Would you like to sit?</p>
+        <p><b>CHURCHILL:</b> (proud) Certainly not. I would not dream of it. Who knows where things would end? He straightens to his full height, but in so doing he injures himself, and flinches again in pain.</p>
+        <p><b>ELIZABETH:</b> They may actually end in your comfort. Please... ignore my great-great-grandmother and sit. Churchill finally relents, and gratefully sits.</p>
+        <hr style="border-top: 1px solid #cbd5e1; margin: 15px 0;">
+        <div style="font-family: system-ui, sans-serif; font-size: 0.9em; padding-left: 30px;">
+          <b>Annotations:</b><br>
+          • <b>Privy Councillor:</b> a private adviser to the sovereign.<br>
+          • <b>the Sovereign's red box:</b> State papers and documents are sent up to the sovereign in red boxes.<br>
+          • <b>Gladstone:</b> William Ewart Gladstone (1809-1898); served as Prime Minister four times.
+        </div>
+      </div>
+      
+      <p class="instruction"><b>Task 1:</b> Summarise under what circumstances the Queen and Winston Churchill meet and how the meeting goes. (Comprehension)</p>
+      <textarea id="em_t4_summary"></textarea>
+      <button onclick="sendEmail('em_t4_summary', 'Text 4: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2:</b> Compare the two characters. (Analysis)</p>
+      <textarea id="em_t4_analysis"></textarea>
+      <button onclick="sendEmail('em_t4_analysis', 'Text 4: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>a) Assess the importance of the Queen for Great Britain. <br>b) Write her diary entry reflecting on her audience with Churchill.</p>
+      <textarea id="em_t4_eval"></textarea>
+      <button onclick="sendEmail('em_t4_eval', 'Text 4: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+
+  <!-- BANNER TEXT V -->
+  <button class="banner-btn b-pastel-3" onclick="toggleBanner('content-text5')">Text V: Kushanava Choudhury: The New World (2017)</button>
+  <div id="content-text5" class="banner-content">
+    <div class="exercise">
+      <h3>The New World (2017)</h3>
+      <p style="color:#64748b;">By Kushanava Choudhury</p>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://bmkltsly13vb.compat.objectstorage.ap-singapore-1.oraclecloud.com/cdn.sg.life.lk/media/images/image_262b9104a0.jpg" alt="The Epic City" style="float: right; width: 180px; margin: 0 0 15px 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p>Of all the people who came to Ellis Island in the first decades of the twentieth century, more than half went back. They never told us that on our seventh-grade class trip. The American immigrant myth says that migration is a reset button. The New World offers deliverance from the past, liberation from the Old World's limited horizons. The myth states: 'The past is gone. The future awaits. Start over.' It never really works like that. That was the story no one ever told about America. The past is never left behind. It haunts every world you live in. Sometimes it drags you back.</p>
+        <p>By the time I visited Ellis Island on that class trip, I had already migrated halfway around the world four times, flipping back and forth between continents like a dual-voltage appliance. My parents were Indian scientists, torn between nation and vocation. Twice they had moved to America, twice they moved back. They were unwilling to leave their country and they were unable to stay. When he was around forty, my father quit his cushy job at a government research institute in Calcutta. He wanted one more chance, he said [...]. So, when I was almost twelve, my parents and I moved to Highland Park, New Jersey.</p>
+        <p>Our move carried no Emma Lazarus cadences. We certainly had not arrived tempest-tossed, beating at the golden door. Our coming was equivocal, always tied to return. Living in New Jersey, we hardly saw ourselves as immigrants. My parents expected to go back to India, like many of their Bengali friends, someday, eventually. On Saturday nights, they gathered at each other's homes, ate fourteen-course meals brimming with various types of fish and meat, and derailed each other's sentences in locomotive Bengali, their conversations full of memories of Calcutta. Return, the duty of return and the dream of return, were spoken of endlessly while eating platefuls of goat curry and hilsa fish. Few, of course, actually went back. There were too many good reasons not to. Nationalism and nostalgia did not pay the bills, raise children or advance careers. And yet that dream of return to the great metropolis cocooned them like a protective blanket from the alien world all around.</p>
+        <p>As for me my friends, my neighborhood, my Calcutta life was gone. In New Jersey, I was in seventh grade in a public school that had almost no Indian students. Cocooning was not an option. I had to fit in fast. I wasn't assimilating as much as passing. So much of what went on inside my head was from another place. I had happy childhood memories of mid-morning cricket matches during summer vacations, of games played in gullies, rooftops, courtyards and streets. When I moved, it was the streets of the city as much as my childhood that I left behind.</p>
+        <p>We had not had an easy few years in America. The man who had offered the job to my father had made promises he did not keep, and so my father was forced to find other work, work he grew to despise. From time to time, there would be talk of another move, to Georgia, to Colorado, and I would pull down the posters in my room and prepare. We stayed put, the three of us adrift in the treacherous shoals of the lower middle class, a world of chronic car trouble and clothes from K-Mart. In the fall of my senior year, a piece of good news finally came to our two-bedroom apartment. I had been accepted early to Princeton University.</p>
+        <p>Every immigrant who has lugged worthless foreign degrees through customs knows that where you go to college [...] determines your lot in life. When the acceptance letter from Princeton arrived, my parents acted as if someone had come to our door with balloons and a giant cardboard cheque. It was their happiest day in America. But it wasn't mine.</p>
+        <p>It is probably universally true that education drives a wedge between us and our hometowns, our families, our earlier selves. But for the immigrant the gap is greater, that divergence in mentality more extreme. My trajectory was taking me farther afield, to Princeton, while part of me was elsewhere, in another country, in another city. Through all my sojourns I had carried memories on my back like Huien Tsang's chair, until at seventeen, I felt hunched over nostalgia like a middle-aged man. When the Princeton letter arrived, I had what my friend Ben called a 'premature midlife crisis'. At night, I couldn't sleep. By day I sleepwalked through classes.</p>
+        <p>Each evening, while my friends assembled at Dunkin' Donuts, complained about how there was nothing to do in our little town and roared together into the night on long aimless drives, while they enjoyed the languor of spring and that sweet American affliction called senioritis, I stayed home and stewed. In my mind, I hatched a plan. I would go back.</p>
+        <p>India lives in its villages, Mahatma Gandhi had said. So, even though I was a city boy who had never spent a night in an Indian village, I wrote letters back home to arrange to teach in a village school. Instead of Princeton, I would take a year off and head to rural Bengal, I told my parents. But in our two-bedroom apartment full of shared immigrant striving, such a detour was out of the question.</p>
+        <p>Instead I just drove. The black night, the shimmering yellow lines on inviting ribbons of asphalt, the radio jammed loud. Enveloped by night and noise, the mind gave way to a deeper calling. Just drive. It was the mantra of our Jersey youth, an exhortation, a command, an ideology, something hardwired in us as teenage boys. Night after night I took my parents' Toyota and just drove, without destination, without purpose, to escape. [...]</p>
+        <p>After graduating from college, while friends set up their apartments in New York, Boston, and Los Angeles, I headed to Calcutta, to join the Statesman.</p>
+        <hr style="border-top: 1px solid #cbd5e1; margin: 15px 0;">
+        <div style="font-family: system-ui, sans-serif; font-size: 0.9em; padding-left: 30px;">
+          <b>Annotations:</b><br>
+          • <b>Emma Lazarus:</b> author of "The New Colossus", a poem engraved on the base of the Statue of Liberty.<br>
+          • <b>hilsa:</b> popular and costly fish eaten in the Indian Subcontinent.<br>
+          • <b>Huien Tsang:</b> Chinese Buddhist monk and scholar.<br>
+          • <b>senioritis:</b> colloquial: decreased motivation to study displayed by senior students.
+        </div>
+      </div>
+
+      <p class="instruction"><b>Task 1:</b> Outline the biographical information given on the author and his parents.</p>
+      <textarea id="em_t5_summary"></textarea>
+      <button onclick="sendEmail('em_t5_summary', 'Text 5: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2:</b> Analyze how Choudhury's attitude towards the traditional view of American immigration is conveyed.</p>
+      <textarea id="em_t5_analysis"></textarea>
+      <button onclick="sendEmail('em_t5_analysis', 'Text 5: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>a) Assess the "Melting Pot" concept. <br>b) Write an article for an international school project on identity, discussing the importance of place in shaping one's identity.</p>
+      <textarea id="em_t5_eval"></textarea>
+      <button onclick="sendEmail('em_t5_eval', 'Text 5: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+
+  <!-- BANNER TEXT VI -->
+  <button class="banner-btn b-pastel-4" onclick="toggleBanner('content-text6')">Text VI: Senator Elizabeth Warren: Speech on racial inequality (2015)</button>
+  <div id="content-text6" class="banner-content">
+    <div class="exercise">
+      <h3>Speech on racial inequality (2015)</h3>
+      <p style="color:#64748b;">Senator Elizabeth Warren</p>
+      <div class="text-box numbered-text" style=" line-height: 1.8;">
+        <img src="https://i.guim.co.uk/img/media/fcf05791f2d227eff19ebcbdb769c11ff260ac23/0_0_1681_1009/master/1681.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=c1539338841daf7fcc019385021f3590" alt="Elizabeth Warren" style="float: left; width: 220px; margin: 0 15px 15px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <p>A half-century ago, when Senator Kennedy spoke of the Civil Rights Act, entrenched, racist power did everything it could to sustain oppression of African Americans, and violence was its first tool. Lynchings, terrorism, intimidation. The 16th Street Baptist Church. Medgar Evers. Emmett Till. When Alabama Governor George Wallace stood before the nation and declared during his 1963 inaugural address that he would defend "segregation now, segregation tomorrow, segregation forever," he made clear that the state would stand with those who used violence.</p>
+        <p>But violence was not the only tool. African Americans were effectively stripped of citizenship when they were denied the right to vote. The tools varied - literacy tests, poll taxes, moral character tests, grandfather clauses - but the results were the same. They were denied basic rights of citizenship and the chance to participate in self-government.</p>
+        <p>The third tool of oppression was to deliberately deny millions of African Americans economic opportunities solely because of the color of their skin. [...]</p>
+        <p>In the same way that the tools of oppression were woven together, a package of civil rights laws came together to protect black people from violence, to ensure access to the ballot box, and to build economic opportunity. Or to say it another way, these laws made three powerful declarations: Black lives matter. Black citizens matter. Black families matter.</p>
+        <p>Fifty years later, we have made real progress toward creating the conditions of freedom - but we have not made ENOUGH progress.</p>
+        <p>Fifty years later, violence against African Americans has not disappeared. Consider law enforcement. The vast majority of police officers sign up so they can protect their communities. They are part of an honorable profession that takes risks every day to keep us safe. We know that. But we also know and say the names of those whose lives have been treated with callous indifference. Sandra Bland. Freddie Gray. Michael Brown. We've seen sickening videos of unarmed, black Americans cut down by bullets, choked to death while gasping for air - their lives ended by those who are sworn to protect them. Peaceful, unarmed protestors have been beaten. Journalists have been jailed. And, in some cities, white vigilantes with weapons freely walk the streets. And it's not just about law enforcement either. Just look to the terrorism this summer at Emanuel AME Church. We must be honest: Fifty years after John Kennedy and Martin Luther King, Jr. spoke out, violence against African Americans has not disappeared.</p>
+        <p>And what about voting rights? Two years ago, five conservative justices on the Supreme Court gutted the Voting Rights Act, opening the floodgates ever wider for measures designed to suppress minority voting. Today, the specific tools of oppression have changed - voter ID laws, racial gerrymandering, and mass disfranchisement through a criminal justice system that disproportionately incarcerates black citizens. The tools have changed, but black voters are still deliberately cut out of the political process.</p>
+        <p>Violence. Voting. And what about economic injustice? Research shows that the legal changes in the civil rights era created new employment and housing opportunities. In the 1960s and the 1970s, African-American men and women began to close the wage gap with white workers, giving millions of black families hope that they might build real wealth.</p>
+        <p>But then, Republicans' trickle-down economic theory arrived. Just as this country was taking the first steps toward economic justice, the Republicans pushed a theory that meant helping the richest people and the most powerful corporations get richer and more powerful. I'll just do one statistic on this: From 1980 to 2012, GDP continued to rise, but how much of the income growth went to the 90% of America - everyone outside the top 10% - black, white, Latino? None. Zero. Nothing. 100% of all the new income produced in this country over the past 30 years has gone to the top ten percent. [...]</p>
+        <p>Back in March, I met an elderly man at the First Baptist Church in Montgomery, Alabama. We were having coffee and donuts in the church basement before the service started. He told me that more than 50 years earlier in May of 1961 he had spent 11 hours in that same basement, along with hundreds of people, while a mob outside threatened to burn down the church because it was a sanctuary for civil rights workers. Dr. King called Attorney General Bobby Kennedy, desperately asking for help. The Attorney General promised to send the Army, but the closest military base was several hours away. So the members of the church and the civil rights workers waited in the sweltering basement, crowded together, listening to the mob outside and hoping the U.S. Army would arrive in time.</p>
+        <p>After the church service, I asked Congressman John Lewis about that night. He had been right there in that church back in 1961 while the mob gathered outside. He had been in the room during the calls to the Attorney General. I asked if he had been afraid that the Army wouldn't make it in time. He said that he was "never, ever afraid. You come to that point where you lose all sense of fear." And then he said something I'll never forget. He said that his parents didn't want him to get involved in civil rights. They didn't want him to "cause trouble." But he had done it anyway. He told me: "Sometimes it is important to cause necessary trouble."</p>
+        <p>The first civil rights battles were hard fought. But they established that Black Lives Matter. That Black Citizens Matter. That Black Families Matter. Half a century later, we have made real progress, but we have not made ENOUGH progress. As Senator Kennedy said in his first floor speech, "This is not a political issue. It is a moral issue, to be resolved through political means." So it comes to us to continue the fight, to make, as John Lewis said, the "necessary trouble" until we can truly say that in America, every citizen enjoys the conditions of freedom.</p>
+        <hr style="border-top: 1px solid #cbd5e1; margin: 15px 0;">
+        <div style="font-family: system-ui, sans-serif; font-size: 0.9em; padding-left: 30px;">
+          <b>Annotations:</b><br>
+          • <b>16th Street Baptist Church:</b> reference to church bombing, carried out by white terrorists.<br>
+          • <b>Medgar Evers, Emmett Till:</b> African Americans who became victims of racist violence.<br>
+          • <b>grandfather clause:</b> a racist law restricting voting rights.<br>
+          • <b>Sandra Bland, Freddie Gray, Michael Brown:</b> African Americans who died by police actions or while in prison.<br>
+          • <b>AME:</b> African Methodist Episcopal; alludes to a racist shooting in 2015.<br>
+          • <b>gerrymandering:</b> to establish a political advantage for a particular party or group by manipulating boundaries.<br>
+          • <b>disfranchisement:</b> to take away the right to vote.<br>
+          • <b>trickle-down economic theory:</b> belief that if high-income earners gain an increase in salary, then everyone benefits.
+        </div>
+      </div>
+
+      <p class="instruction"><b>Task 1:</b> Outline the main ideas Senator Warren focuses on in the extract from her speech.</p>
+      <textarea id="em_t6_summary"></textarea>
+      <button onclick="sendEmail('em_t6_summary', 'Text 6: Summary')">Submit Summary to Teacher</button>
+      
+      <p class="instruction"><b>Task 2:</b> Analyze how Senator Warren tries to persuade the audience of her position.</p>
+      <textarea id="em_t6_analysis"></textarea>
+      <button onclick="sendEmail('em_t6_analysis', 'Text 6: Analysis')">Submit Analysis to Teacher</button>
+      
+      <p class="instruction"><b>Task 3: Evaluation</b><br>a) Comment on whether the policy of affirmative action could help right some of the wrongs mentioned in Warren's speech.<br>b) Discuss the quotation "Sometimes it is important to cause necessary trouble" in an article for the school magazine.</p>
+      <textarea id="em_t6_eval"></textarea>
+      <button onclick="sendEmail('em_t6_eval', 'Text 6: Evaluation')">Submit Evaluation to Teacher</button>
+    </div>
+  </div>
+</div> <!-- Close tab-texts -->
+
+<!-- TAB 4: BONUS ARTICLE -->
+<div id="tab-guide" class="tab-content">
+  <h2>Bonus: Article</h2>
+  <div class="progress-text">Section 4 Progress: <span id="sec4-progress-text">0%</span></div>
+  <div class="progress-container"><div class="progress-bar" id="sec4-progress-bar"></div></div>
+
+  <div class="exercise">
+    <h3 style="margin-bottom: 5px;">Pen pushers: promoting student writing skills</h3>
+    <p style="color:#64748b; font-style: italic; margin-top: 0;">By Stephanie Hirschman</p>
+    <img src="https://www.linguahouse.com/linguafiles/md5/fe3480c712e335660a5777eefb9d669b" alt="Pen pushers illustration" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px;">
+    
+    <div class="text-box" style=" line-height: 1.8;">
+      <p><b>Introduction</b><br>
+      Student writing offers teachers a window into individual personalities and progress like no other activity. Unlike speaking, it provides teachers with a sizeable and permanent sample of student language and offer opportunities for individual feedback. Furthermore, it's a real-life skill, especially in business and academic contexts and is also a component of popular English exams like IELTS or Cambridge. Effective teaching of this skill puts the whole process of successful writing at the heart of learning: planning, writing and feedback.</p>
+
+      <p><b>Planning and writing</b><br>
+      Don't throw students in at the deep end! Writing should be the culmination of a lesson in which students explore a topic and any associated language points. Examine the task instructions carefully with the class and set brainstorming activities so that students have some content in mind before they put pen to paper.</p>
+      <p>At this stage there are several options. Students could complete the task for homework, saving valuable lesson time, or they could complete the task in class, allowing the teacher to monitor individuals. A hybrid approach, where students complete one paragraph or write for a set time in class under supervision, and then finish their work at home, ensures everyone is on the right track.</p>
+      <p>Setting up a writing workshop, where students tackle a task but must come up to the teacher at least once during the session for advice and correction, is a good strategy for building confidence, and works well in contexts where students cannot take in further input because they have very long lessons and/or very late lessons.</p>
+
+      <p><b>Feedback</b><br>
+      There are various marking or feedback models to choose from. The lightest touch, which is most appropriate for a non-exam task, is simply to read each student's work to check whether they have used and mastered the target language. This enables you to decide if this language area needs revisiting in a future lesson. Students expect some feedback, but this should be focused on the target language only for this type of task.</p>
+      <p>Exam or business writing tasks are all about the successful reproduction of genre, be that an e-mail or an essay. For these types of tasks, accuracy is only one of several areas to assess. Many Linguahouse lessons include a marking framework, which differentiate the following areas (with a little imagination these produce the acronym COAST).</p>
+      <ul style="margin-top: 0;">
+        <li><b>Content:</b> did the student understand the task (including word count) and write a relevant and appropriate response?</li>
+        <li><b>Organization:</b> did the student use paragraphs and linking words effectively to build a logical and easy-to-follow argument?</li>
+        <li><b>Accuracy and range:</b> did the student use a range of language accurately enough for the reader to understand their main points?</li>
+        <li><b>Style:</b> is the style or register appropriate for the task?</li>
+        <li><b>effect on Target reader:</b> does the intended audience understand the writer's message and can they take action after reading?</li>
+      </ul>
+      <p>The form also includes positive comments and priorities for improvement in similar future tasks. In conjunction with error correction, a framework like this provides useful information for both teachers and students. Students who are already familiar with the form benefit from in-class activities where they correct their own work, a deliberately flawed model answer, or even, if trust is high, a classmate's work, although the teacher should also check this.</p>
+      <p>One note: the teacher is the only person who should be assessing accuracy. Students cannot identify and correct errors in their own or a classmate's work. Teachers should be selective with error correction in order not to overwhelm students, and using a correction code is advised.</p>
+
+      <p><b>What's my score?</b><br>
+      The model described above is an example of formative assessment - it checks progress. However, students, especially if they are preparing for an exam, often request a summative assessment, in other words, a mark or grade. While this is understandable, providing a predicted score for exams can be highly problematic.</p>
+      <p>To begin with, teachers who are not trained by exam boards run the risk of providing incorrect scores, while teachers who are trained are often not allowed to share scores in this way. Secondly, there is no way of knowing what will happen on the day of the exam - an unfamiliar topic or nerves may mean students underperform. Finally, a predicted score may lead to student disengagement: telling a student they've achieved a passing score may result in them deciding it's not necessary to make any further efforts to improve, while telling them they are not on target to pass this portion of the exam may lead to them giving up - what's the point?</p>
+
+      <p><b>Conclusion</b><br>
+      Students benefit so much from well-structured writing activities that they more than justify any extra time spend marking. Furthermore, applying set criteria and producing an improved version of a piece of work are skills which transfer to academic or working environments.</p>
+    </div>
+    
+    <p class="instruction"><b>Bonus Reflection Task:</b> How can you apply the COAST framework to your next essay writing task?</p>
+    <textarea id="bonus_article_reflection" placeholder="Your reflections..."></textarea>
+    <button onclick="sendEmail('bonus_article_reflection', 'Bonus Article Reflection')">Submit Reflection to Teacher</button>
+  </div>
+</div>
+
+</div> <!-- Close container -->
+
+<script>
+// --- Logic for Tabs ---
+function openTab(evt, tabId) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(c => c.classList.remove('active'));
+  const btns = document.querySelectorAll('.tab-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
+
+// --- Funcionalidade dos Banners Expansíveis ---
+function toggleBanner(contentId) {
+  const content = document.getElementById(contentId);
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+
+// --- Rastreamento dos Botões Externos ---
+function trackLinkClick(btnId) {
+  localStorage.setItem(btnId, 'clicked');
+  updateGlobalProgress();
+}
+
+// --- Send Email Logic ---
+function sendEmail(textareaId, taskName) {
+  const text = document.getElementById(textareaId).value;
+  if(!text || !text.trim()) return alert('Please write your answer before submitting.');
+  const body = encodeURIComponent(text);
+  window.location.href = `mailto:dirapozo@gmail.com?subject=Submission: ${taskName}&body=${body}`;
+}
+
+// --- Logic for Auto-correction with Synonyms ---
+function normalizeString(str) {
+  return str.trim().toLowerCase().replace(/[.,!?;"]/g, '').replace(/\s+/g, ' ');
+}
+
+function checkGroupAnswers(prefix) {
+  const fields = document.querySelectorAll(`input[type="text"][id^="${prefix}"]`);
+  let correctCount = 0;
+  let totalCount = fields.length;
+
+  fields.forEach(field => {
+    field.classList.remove('correct', 'incorrect');
+    const studentAnswer = normalizeString(field.value);
+    
+    let acceptableAnswers = [];
+    try {
+      acceptableAnswers = JSON.parse(field.getAttribute('data-answers') || '[]');
+    } catch(e) { console.error("Invalid data-answers on", field.id); }
+
+    let isCorrect = false;
+    for(let ans of acceptableAnswers) {
+      if(studentAnswer === normalizeString(ans)) {
+        isCorrect = true;
+        break;
+      }
+    }
+
+    if (studentAnswer !== "") {
+      if(isCorrect) {
+        field.classList.add('correct');
+        correctCount++;
+      } else {
+        field.classList.add('incorrect');
+      }
+    }
+  });
+
+  const barContainer = document.getElementById(`bar_${prefix}`);
+  if(barContainer) {
+    barContainer.style.display = 'block';
+    const pct = Math.round((correctCount / totalCount) * 100);
+    barContainer.querySelector('.score-val').innerText = `${correctCount} / ${totalCount} (${pct}%)`;
+    const bar = barContainer.querySelector('.progress-bar');
+    bar.style.width = pct + '%';
+    bar.style.backgroundColor = pct === 100 ? 'var(--success)' : (pct > 50 ? '#eab308' : 'var(--error)');
+  }
+  
+  updateGlobalProgress();
+}
+
+// --- Atualização de Progresso Geral e por Seção ---
+function updateGlobalProgress() {
+  const textInputs = document.querySelectorAll('input[type="text"], textarea');
+  const trackingBtns = ['btn_camb_essay', 'btn_camb_email', 'btn_camb_sum'];
+  const checkInputs = document.querySelectorAll('input[type="checkbox"]');
+  
+  let totalItems = textInputs.length + trackingBtns.length + checkInputs.length;
+  let filled = 0;
+
+  textInputs.forEach(i => { if(i.value.trim() !== '') filled++; });
+  trackingBtns.forEach(btnId => { if(localStorage.getItem(btnId) === 'clicked') filled++; });
+  checkInputs.forEach(chk => { if(chk.checked) filled++; });
+
+  const pct = Math.round((filled / totalItems) * 100) || 0;
+  if(document.getElementById('main-progress-text')) {
+    document.getElementById('main-progress-text').innerText = pct + '%';
+    document.getElementById('main-progress-bar').style.width = pct + '%';
+  }
+  
+  // Section 1 Progress
+  const sec1Inputs = document.querySelectorAll('#tab-lang input[type="text"], #tab-lang textarea');
+  let sec1Filled = 0;
+  sec1Inputs.forEach(i => { if(i.value.trim() !== '') sec1Filled++; });
+  const sec1Pct = Math.round((sec1Filled / sec1Inputs.length) * 100) || 0;
+  if(document.getElementById('sec1-progress-text')) {
+    document.getElementById('sec1-progress-text').innerText = sec1Pct + '%';
+    document.getElementById('sec1-progress-bar').style.width = sec1Pct + '%';
+  }
+
+  // Section 2 Progress
+  const sec2Inputs = document.querySelectorAll('#tab-labs input[type="text"], #tab-labs textarea');
+  const sec2Checks = document.querySelectorAll('#tab-labs input[type="checkbox"]');
+  let sec2Filled = 0;
+  sec2Inputs.forEach(i => { if(i.value.trim() !== '') sec2Filled++; });
+  sec2Checks.forEach(chk => { if(chk.checked) sec2Filled++; });
+  trackingBtns.forEach(btnId => { if(localStorage.getItem(btnId) === 'clicked') sec2Filled++; });
+  
+  const sec2Total = sec2Inputs.length + sec2Checks.length + trackingBtns.length;
+  const sec2Pct = Math.round((sec2Filled / sec2Total) * 100) || 0;
+  if(document.getElementById('sec2-progress-text')) {
+    document.getElementById('sec2-progress-text').innerText = sec2Pct + '%';
+    document.getElementById('sec2-progress-bar').style.width = sec2Pct + '%';
+  }
+
+  // Section 3 Progress
+  const sec3Inputs = document.querySelectorAll('#tab-texts textarea');
+  let sec3Filled = 0;
+  sec3Inputs.forEach(i => { if(i.value.trim() !== '') sec3Filled++; });
+  const sec3Pct = Math.round((sec3Filled / sec3Inputs.length) * 100) || 0;
+  if(document.getElementById('sec3-progress-text')) {
+    document.getElementById('sec3-progress-text').innerText = sec3Pct + '%';
+    document.getElementById('sec3-progress-bar').style.width = sec3Pct + '%';
+  }
+
+  // Section 4 Progress
+  const sec4Inputs = document.querySelectorAll('#tab-guide textarea');
+  let sec4Filled = 0;
+  sec4Inputs.forEach(i => { if(i.value.trim() !== '') sec4Filled++; });
+  const sec4Pct = Math.round((sec4Filled / sec4Inputs.length) * 100) || 0;
+  if(document.getElementById('sec4-progress-text')) {
+    document.getElementById('sec4-progress-text').innerText = sec4Pct + '%';
+    document.getElementById('sec4-progress-bar').style.width = sec4Pct + '%';
+  }
+}
+
+// --- Load Saves ---
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('input[type="text"], textarea').forEach(el => {
+    const saved = localStorage.getItem(el.id);
+    if (saved) el.value = saved;
+    el.addEventListener('input', () => {
+        localStorage.setItem(el.id, el.value);
+        updateGlobalProgress();
+    });
+  });
+
+  document.querySelectorAll('input[type="checkbox"]').forEach(el => {
+    if(localStorage.getItem(el.id) === 'true') el.checked = true;
+    el.addEventListener('change', () => {
+        localStorage.setItem(el.id, el.checked);
+        updateGlobalProgress();
+    });
+  });
+
+  updateGlobalProgress();
+});
+</script>
+</body>
+</html>

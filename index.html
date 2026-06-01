@@ -886,12 +886,55 @@ function trackLinkClick(btnId) {
   updateGlobalProgress();
 }
 
-// --- Send Email Logic ---
+// --- Send FormSubmit Logic (Envio Direto) ---
 function sendEmail(textareaId, taskName) {
   const text = document.getElementById(textareaId).value;
   if(!text || !text.trim()) return alert('Please write your answer before submitting.');
-  const body = encodeURIComponent(text);
-  window.location.href = `mailto:dirapozo@gmail.com?subject=Submission: ${taskName}&body=${body}`;
+  
+  enviarParaProfessor(taskName, text);
+}
+
+function sendEmailGroup(ids, groupName) {
+  let combinedText = '';
+  ids.forEach(id => {
+    const val = document.getElementById(id).value;
+    if(val && val.trim()) {
+      combinedText += `--- Task: ${id.toUpperCase()} ---\n${val}\n\n`;
+    }
+  });
+  
+  if(!combinedText.trim()) return alert('Please complete at least one task before submitting.');
+  
+  enviarParaProfessor(groupName, combinedText);
+}
+
+function enviarParaProfessor(assunto, conteudo) {
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = 'https://formsubmit.co/dirapozo@gmail.com';
+  form.target = '_blank'; 
+  
+  const subjectField = document.createElement('input');
+  subjectField.type = 'hidden';
+  subjectField.name = '_subject';
+  subjectField.value = `New Submission: ${assunto}`;
+  form.appendChild(subjectField);
+  
+  const messageField = document.createElement('input');
+  messageField.type = 'hidden';
+  messageField.name = 'Student_Answers';
+  messageField.value = conteudo;
+  form.appendChild(messageField);
+
+  const captchaField = document.createElement('input');
+  captchaField.type = 'hidden';
+  captchaField.name = '_captcha';
+  captchaField.value = 'false';
+  form.appendChild(captchaField);
+  
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
 }
 
 // --- Logic for Auto-correction with Synonyms ---

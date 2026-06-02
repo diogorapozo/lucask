@@ -463,10 +463,30 @@ Natasha</div>
   </div>
 
   <!-- BANNER 3: SUMMARY -->
-  <button class="banner-btn b-pastel-3" onclick="toggleBanner('content-summary')">3. Summary</button>
+<button class="banner-btn b-pastel-3" onclick="toggleBanner('content-summary')">3. Summary</button>
   <div id="content-summary" class="banner-content">
     <div class="exercise">
       <h3>Video & Audio: Are teenagers really lazy?</h3>
+      
+      <h4>1. The Anatomy of a Great Summary</h4>
+      <div class="text-box">
+        <p>Before you write your summary, review these essential rules to ensure your text is objective and properly structured.</p>
+        <p><b>The Perfect Start (TATTE Formula)</b><br>
+        Every summary must begin with a single introductory sentence covering:<br>
+        • <b>T</b> - Title (e.g., "Are teenagers really lazy?")<br>
+        • <b>A</b> - Author / Speaker<br>
+        • <b>T</b> - Text Type (e.g., video, article, podcast)<br>
+        • <b>T</b> - Topic<br>
+        • <b>E</b> - Explanation (the core message)<br>
+        <i>Example:</i> "In the video 'Are teenagers really lazy?', the speaker highlights the lack of appropriate sports facilities for young people."</p>
+        <p><b>The Golden Rule: Zero Opinion!</b><br>
+        Never use "I think", "In my opinion", or include your own experiences. Your job is to mirror the original text objectively.</p>
+        <p><b>Language & Tense</b><br>
+        • Keep your tenses consistent, primarily using the <b>Simple Present</b>.<br>
+        • Use neutral reporting verbs: <i>The speaker claims, states, points out, argues, suggests.</i><br>
+        • Focus strictly on the main points. Do not include minor details or statistics unless absolutely necessary. Always use your own words (paraphrase).</p>
+      </div>
+
       <iframe src="https://www.youtube.com/embed/SmnR4AZ-XM8" height="315" allowfullscreen></iframe>
       <audio controls src="https://www.linguahouse.com/esl-lesson-plans/english-for-teenagers/are-teenagers-really-lazy/audioplayer/the-active-audio-bemp3"></audio>
       
@@ -490,8 +510,40 @@ Natasha</div>
       <div class="success-bar-container" id="bar_wl_sum"><div class="success-bar-text">Score: <span class="score-val"></span></div><div class="progress-container"><div class="progress-bar"></div></div></div>
 
       <h4>Task: Summary</h4>
-<p class="instruction">Write a comprehensive summary of the video/audio. Ensure your text is objective, written in the present tense, and strictly focuses on the main points without including personal opinions. Use reported speech to convey the speakers' arguments regarding teenagers and sports.</p>      <textarea id="wl_summary_task" placeholder="Write your summary here..."></textarea>
+      <p class="instruction">Write a comprehensive summary of the video/audio. Ensure your text is objective, written in the present tense, and strictly focuses on the main points without including personal opinions. Use reported speech to convey the speakers' arguments regarding teenagers and sports.</p>
+      <textarea id="wl_summary_task" placeholder="Write your summary here..."></textarea>
       <button onclick="sendEmail('wl_summary_task', 'Summary Task')">Submit Summary to Teacher</button>
+      <br>
+      <a href="https://writeandimprove.com/workbooks#/wi-workbooks/bdc648bc-b760-4bac-98bc-161a95deff5e/tasks/69fd8cb2-b060-4d0c-9e12-92fe249fa631" target="_blank" class="cambridge-btn" id="btn_camb_sum" onclick="trackLinkClick('btn_camb_sum')">Now go to Cambridge Lab</a>
+    </div>
+  </div>
+
+  <button class="banner-btn b-pastel-5" onclick="toggleBanner('content-analysis')">4. Analysis</button>
+  <div id="content-analysis" class="banner-content">
+    <div class="exercise">
+      <h3>The Anatomy of a Great Analysis</h3>
+      <div class="text-box">
+        <p><b>The P.E.E. Method</b><br>
+        Do not just list rhetorical devices. For every device you find, apply this formula:<br>
+        • <b>Point:</b> Identify the device and its general function.<br>
+        • <b>Evidence:</b> Provide the exact quote and reference (e.g., <i>cf. para. 2</i>).<br>
+        • <b>Explanation:</b> Explain the specific effect on the reader.</p>
+
+        <p><b>Vocabulary Upgrade</b><br>
+        Stop using basic phrases like <i>"The author says"</i> or <i>"The reader feels"</i>. Upgrade your academic writing with professional analytical verbs:<br>
+        • <i>To present/emphasize:</i> The author claims, contends, highlights, underscores, stresses, depicts.<br>
+        • <i>To analyze effect:</i> This evokes a sense of indignation... / The metaphor underscores the absurdity of... / The author aims to provoke a critical reaction regarding...</p>
+
+        <p><b>Key Rhetorical Devices to Look For:</b><br>
+        • <b>Structural Devices (Rhythm & Emphasis):</b> Anaphora (repetition at the beginning of clauses), Parallelism (similar grammatical structure), Tricolon (a series of three parallel words/phrases).<br>
+        • <b>Imagery and Comparison (Visualization):</b> Metaphor (direct comparison without 'like' or 'as'), Personification (giving human qualities to non-human things), Simile (comparison using 'like' or 'as').<br>
+        • <b>Persuasive Devices (Logic & Emotion):</b> Antithesis (contrasting ideas), Rhetorical Question (question asked for effect), Allusion (brief reference to a historical event or person).</p>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <button onclick="sendEmailGroup(['wl_essay_task', 'wl_email_partc', 'wl_email_task', 'wl_summary_task'], 'Writing Labs Submissions')">Submit All Writing Labs Textareas to Teacher</button>
       <br>
       <a href="https://writeandimprove.com/workbooks#/wi-workbooks/bdc648bc-b760-4bac-98bc-161a95deff5e/tasks/69fd8cb2-b060-4d0c-9e12-92fe249fa631" target="_blank" class="cambridge-btn" id="btn_camb_sum" onclick="trackLinkClick('btn_camb_sum')">Now go to Cambridge Lab</a>
     </div>
